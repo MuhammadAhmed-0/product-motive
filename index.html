@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ProductMotive | Find the right product for you</title>
+  <meta name="description" content="Answer a few questions about your needs, budget and priorities. ProductMotive narrows down products and software and shows you matches with clear reasons.">
+  <link rel="canonical" href="https://productmotive.com/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#F8F8F5">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ProductMotive">
+  <meta property="og:title" content="ProductMotive | Find the right product for you">
+  <meta property="og:description" content="Not just the most popular one. Tell us what you need and we'll help you narrow down the options.">
+  <meta property="og:url" content="https://productmotive.com/">
+  <meta property="og:image" content="https://productmotive.com/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231F2328'/%3E%3Cpath d='M9 11l7 5-7 5' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='22.5' cy='16' r='3' fill='%234FD1BF'/%3E%3C/svg%3E">
+
+  <!-- One variable font family, one request -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://productmotive.com/#organization",
+        "name": "ProductMotive",
+        "url": "https://productmotive.com/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://productmotive.com/#website",
+        "url": "https://productmotive.com/",
+        "name": "ProductMotive",
+        "description": "A product and software decision platform that turns your needs, budget and priorities into personalized recommendations.",
+        "publisher": { "@id": "https://productmotive.com/#organization" }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ==========================================================
+       ICON SPRITE
+       Add an icon: drop a <symbol id="i-yourname"> here, then use
+       icon: "yourname" in assets/js/data.js
+       ========================================================== -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M6 12h12"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></symbol>
+    <symbol id="i-technology" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M9.5 3.5v2M14.5 3.5v2M9.5 18.5v2M14.5 18.5v2M3.5 9.5h2M3.5 14.5h2M18.5 9.5h2M18.5 14.5h2"/></symbol>
+    <symbol id="i-home-office" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 9.5V19h12V9.5"/><path d="M10 19v-5h4v5"/></symbol>
+    <symbol id="i-software" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 9.5h18M7 7.25h.01M10 7.25h.01"/></symbol>
+    <symbol id="i-business" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2.5"/><path d="M9 8V6.5A1.5 1.5 0 0 1 10.5 5h3A1.5 1.5 0 0 1 15 6.5V8M3 13h18"/></symbol>
+    <symbol id="i-travel" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
+    <symbol id="i-lifestyle" viewBox="0 0 24 24"><path d="M12 19.5s-7-4.3-7-9.6A3.9 3.9 0 0 1 12 7.6a3.9 3.9 0 0 1 7 2.3c0 5.3-7 9.6-7 9.6z"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".6"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4.5v15M7 19.5h10M5 8h14"/><path d="M5 8l-2.5 5.5a2.6 2.6 0 0 0 5 0L5 8zM19 8l-2.5 5.5a2.6 2.6 0 0 0 5 0L19 8z"/></symbol>
+    <symbol id="i-compare" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="7.5" height="15" rx="2"/><rect x="13" y="4.5" width="7.5" height="15" rx="2"/><path d="M6 9.5h2.5M6 13h2.5M15.5 9.5H18M15.5 13H18"/></symbol>
+  </svg>
+
+  <!-- ==========================================================
+       HEADER
+       ========================================================== -->
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="ProductMotive home">
+        <svg class="brand-mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="9" fill="#1F2328"/>
+          <path d="M9 11l7 5-7 5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="22.5" cy="16" r="3" fill="#4FD1BF"/>
+        </svg>
+        <span class="brand-name">ProductMotive</span>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary" data-nav>
+        <ul class="nav-list">
+          <li><a href="/#how-it-works">How It Works</a></li>
+          <li><a href="/#categories">Categories</a></li>
+          <li><a href="/#guides">Guides</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm" href="/find-your-match">Find My Match <span class="btn-arrow" aria-hidden="true">→</span></a>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+        <span class="sr-only">Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ==========================================================
+         HERO
+         ========================================================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">Find the right product for you.</h1>
+          <p class="lead">Not just the most popular one. Tell us what you need and we’ll help you narrow down the options.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary btn--lg" href="/find-your-match">Find My Match <span class="btn-arrow" aria-hidden="true">→</span></a>
+            <a class="link-quiet" href="#how-it-works">See how it works</a>
+          </div>
+        </div>
+
+        <!-- Abstract UI preview: Questions → Requirements → Product matches.
+             Pure HTML/CSS. The load sequence is CSS-only and is skipped for reduced-motion users. -->
+        <div class="flow-stage" role="img" aria-label="Illustration of the ProductMotive flow: your answers to a few questions become requirements, which become ranked product matches.">
+          <div class="flow-card flow-card--1">
+            <p class="flow-label">Questions</p>
+            <p class="flow-q">What will you mainly use it for?</p>
+            <div class="chips">
+              <span class="chip">Everyday</span>
+              <span class="chip is-on">Work</span>
+              <span class="chip">Creative</span>
+              <span class="chip">Something else</span>
+            </div>
+          </div>
+
+          <span class="flow-link flow-link--1"></span>
+
+          <div class="flow-card flow-card--2">
+            <p class="flow-label">Requirements</p>
+            <div class="req">
+              <div class="req-row">
+                <span class="req-key">Budget</span>
+                <span class="range"><span class="range-fill"></span><span class="range-thumb range-thumb--a"></span><span class="range-thumb range-thumb--b"></span></span>
+              </div>
+              <div class="req-row">
+                <span class="req-key">Priorities</span>
+                <span class="req-vals"><span class="tag">Reliability</span><span class="tag">Ease of use</span><span class="tag">Value</span></span>
+              </div>
+              <div class="req-row">
+                <span class="req-key">Use case</span>
+                <span class="req-vals"><span class="tag tag--on">Work</span></span>
+              </div>
+            </div>
+          </div>
+
+          <span class="flow-link flow-link--2"></span>
+
+          <div class="flow-card flow-card--3">
+            <p class="flow-label">Product matches</p>
+            <div class="mrows">
+              <div class="mrow mrow--top">
+                <span class="mthumb"></span>
+                <span class="mtext"><span class="sk sk--dark sk--a"></span><span class="sk sk--b"></span></span>
+                <span class="mtag mtag--accent">Strong match</span>
+              </div>
+              <div class="mrow">
+                <span class="mthumb"></span>
+                <span class="mtext"><span class="sk sk--dark sk--c"></span><span class="sk sk--d"></span></span>
+                <span class="mtag">Alternative</span>
+              </div>
+              <div class="mrow">
+                <span class="mthumb"></span>
+                <span class="mtext"><span class="sk sk--dark sk--a"></span><span class="sk sk--d"></span></span>
+                <span class="mtag">Budget option</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         1. TRUST / VALUE STRIP
+         ========================================================== -->
+    <section class="trust" aria-label="What ProductMotive offers">
+      <div class="container">
+        <ul class="trust-list">
+          <li class="trust-item">
+            <p class="trust-title">Personalized recommendations</p>
+            <p class="trust-text">Matched to your needs, not a one-size-fits-all list.</p>
+          </li>
+          <li class="trust-item">
+            <p class="trust-title">Clear comparisons</p>
+            <p class="trust-text">See how options differ on the things you care about.</p>
+          </li>
+          <li class="trust-item">
+            <p class="trust-title">Research-driven decisions</p>
+            <p class="trust-text">Grounded in product information, not hype.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         2. HOW IT WORKS
+         ========================================================== -->
+    <section class="section" id="how-it-works" aria-labelledby="how-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="how-title">How it works</h2>
+          <p class="section-lead">From a few answers to a shortlist that fits.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-node" aria-hidden="true">01</span>
+            <h3>Tell us what you need</h3>
+            <p>Answer a few simple questions.</p>
+          </li>
+          <li class="step">
+            <span class="step-node" aria-hidden="true">02</span>
+            <h3>We narrow the options</h3>
+            <p>Compare products against your requirements.</p>
+          </li>
+          <li class="step">
+            <span class="step-node" aria-hidden="true">03</span>
+            <h3>See your matches</h3>
+            <p>Get recommendations with clear reasons.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         3. CATEGORIES (data-driven, see assets/js/data.js)
+         ========================================================== -->
+    <section class="section section--flush-top" id="categories" aria-labelledby="cat-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div>
+            <h2 id="cat-title">What are you looking for?</h2>
+            <p class="section-lead">Choose a category to start, or begin without one.</p>
+          </div>
+          <a class="link-quiet" href="/find-your-match">Start without a category</a>
+        </header>
+
+        <ul class="cat-grid" id="category-grid" data-component="categories">
+          <!-- Rendered from PM_DATA.categories. Static fallback for no-JS and crawlers: -->
+          <li><a href="/find-your-match?category=technology">Technology</a></li>
+          <li><a href="/find-your-match?category=home-office">Home &amp; Office</a></li>
+          <li><a href="/find-your-match?category=software">Software</a></li>
+          <li><a href="/find-your-match?category=business">Business</a></li>
+          <li><a href="/find-your-match?category=travel">Travel</a></li>
+          <li><a href="/find-your-match?category=lifestyle">Lifestyle</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         4. DIFFERENTIATOR
+         ========================================================== -->
+    <section class="section section--tint" id="difference" aria-labelledby="diff-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="diff-title">Your situation matters.</h2>
+          <p class="section-lead">Popularity rankings can’t know your budget, priorities or use case. ProductMotive starts there.</p>
+        </header>
+
+        <div class="compare">
+          <!-- Traditional path -->
+          <div class="track track--old">
+            <p class="track-label">Traditional search</p>
+            <ol class="track-steps">
+              <li class="tstep">
+                <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true" focusable="false">
+<g transform="translate(-3 0)">
+                  <g fill="currentColor">
+                    <circle cx="8" cy="9" r="2"/><circle cx="16" cy="9" r="2"/><circle cx="24" cy="9" r="2"/><circle cx="32" cy="9" r="2"/><circle cx="40" cy="9" r="2"/><circle cx="48" cy="9" r="2"/><circle cx="56" cy="9" r="2"/>
+                    <circle cx="8" cy="20" r="2"/><circle cx="16" cy="20" r="2"/><circle cx="24" cy="20" r="2"/><circle cx="32" cy="20" r="2"/><circle cx="40" cy="20" r="2"/><circle cx="48" cy="20" r="2"/><circle cx="56" cy="20" r="2"/>
+                    <circle cx="8" cy="31" r="2"/><circle cx="16" cy="31" r="2"/><circle cx="24" cy="31" r="2"/><circle cx="32" cy="31" r="2"/><circle cx="40" cy="31" r="2"/><circle cx="48" cy="31" r="2"/><circle cx="56" cy="31" r="2"/>
+                  </g>
+                </g>
+</svg>
+                <span class="tstep-text">Hundreds of products</span>
+              </li>
+              <li class="tstep">
+                <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true" focusable="false">
+                  <g fill="none" stroke="currentColor" stroke-width="1.6">
+                    <rect class="glyph-bg" x="3" y="15" width="36" height="22" rx="4"/>
+                    <rect class="glyph-bg" x="13" y="9" width="36" height="22" rx="4"/>
+                    <rect class="glyph-bg" x="24" y="3" width="36" height="22" rx="4"/>
+                    <path d="M31 10h14" stroke-linecap="round"/>
+                  </g>
+                </svg>
+                <span class="tstep-text">Endless tabs</span>
+              </li>
+              <li class="tstep">
+                <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true" focusable="false">
+<g transform="translate(-3 0)">
+                  <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M6 9h20M6 20h13M6 31h17M38 9h12M38 20h20M38 31h9"/>
+                    <path d="M31 4v32" stroke-dasharray="2 4"/>
+                  </g>
+                </g>
+</svg>
+                <span class="tstep-text">Manual comparison</span>
+              </li>
+              <li class="tstep">
+                <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true" focusable="false">
+<g transform="translate(-3 0)">
+                  <path d="M6 26C14 4 22 34 30 18s14-14 18 2 6 4 10-10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+</svg>
+                <span class="tstep-text">Decision fatigue</span>
+              </li>
+            </ol>
+          </div>
+
+          <!-- ProductMotive path -->
+          <div class="track track--new">
+            <p class="track-label">ProductMotive</p>
+            <ol class="track-steps">
+              <li class="tstep">
+                <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true" focusable="false">
+<g transform="translate(-12 0)">
+                  <circle cx="32" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="32" cy="20" r="6" fill="currentColor"/>
+                </g>
+</svg>
+                <span class="tstep-text">Your needs</span>
+              </li>
+              <li class="tstep">
+                <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true" focusable="false">
+<g transform="translate(-9 0)">
+                  <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <rect x="12" y="6" width="8" height="8" rx="2" fill="currentColor"/>
+                    <rect x="12" y="16" width="8" height="8" rx="2" fill="currentColor"/>
+                    <rect x="12" y="26" width="8" height="8" rx="2"/>
+                    <path d="M27 10h25M27 20h19M27 30h22"/>
+                  </g>
+                </g>
+</svg>
+                <span class="tstep-text">A few questions</span>
+              </li>
+              <li class="tstep">
+                <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true" focusable="false">
+<g transform="translate(-3 0)">
+                  <rect x="6" y="8" width="14" height="24" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <rect x="25" y="8" width="14" height="24" rx="4" fill="currentColor"/>
+                  <rect x="44" y="8" width="14" height="24" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                </g>
+</svg>
+                <span class="tstep-text">Relevant products</span>
+              </li>
+              <li class="tstep">
+                <svg class="glyph" viewBox="0 0 64 40" aria-hidden="true" focusable="false">
+<g transform="translate(-12 0)">
+                  <circle cx="32" cy="20" r="14" fill="currentColor"/>
+                  <path d="M25.5 20.5l4.5 4.5 8.5-9.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+</svg>
+                <span class="tstep-text">Clear decision</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         5. RECOMMENDATION PREVIEW (illustrative, placeholder products)
+         ========================================================== -->
+    <section class="section" id="preview" aria-labelledby="preview-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="preview-title">Recommendations that explain themselves.</h2>
+          <p class="section-lead">Every match shows why it fits and where it makes trade-offs, so you can decide with confidence.</p>
+        </header>
+
+        <div class="results">
+          <article class="match match--primary" aria-labelledby="match-1">
+            <div class="match-top">
+              <p class="match-kicker">Your ProductMotive Match</p>
+              <span class="badge badge--strong"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Strong Match</span>
+            </div>
+
+            <div class="match-main">
+              <div class="match-visual" aria-hidden="true">
+                <svg viewBox="0 0 120 120" width="100%" height="100%" focusable="false">
+                  <rect x="30" y="18" width="60" height="84" rx="12" fill="#fff" stroke="#BFDDD8" stroke-width="1.5"/>
+                  <rect x="38" y="28" width="44" height="30" rx="6" fill="#E6F2EF"/>
+                  <circle cx="60" cy="80" r="9" fill="#0F766E"/>
+                  <path d="M42 96h36" stroke="#BFDDD8" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="match-name" id="match-1">Product Example</h3>
+                <p class="match-sub">Placeholder product</p>
+                <ul class="reasons">
+                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Fits your budget</li>
+                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Matches your priorities</li>
+                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Fits your use case</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="match-note"><strong>Why it matched:</strong> It meets each requirement you set, with no major compromises on the priorities you ranked highest.</p>
+          </article>
+
+          <article class="match" aria-labelledby="match-2">
+            <div class="match-top">
+              <p class="match-kicker">Alternative</p>
+              <span class="badge">Good match</span>
+            </div>
+            <div>
+              <h3 class="match-name match-name--sm" id="match-2">Alternative Example</h3>
+              <p class="match-sub">Placeholder product</p>
+            </div>
+            <ul class="reasons">
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Fits your use case</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Different balance of features</li>
+              <li class="is-tradeoff"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-minus"></use></svg>Slightly above your budget</li>
+            </ul>
+          </article>
+
+          <article class="match" aria-labelledby="match-3">
+            <div class="match-top">
+              <p class="match-kicker">Budget Option</p>
+              <span class="badge badge--neutral">Lower cost</span>
+            </div>
+            <div>
+              <h3 class="match-name match-name--sm" id="match-3">Budget Example</h3>
+              <p class="match-sub">Placeholder product</p>
+            </div>
+            <ul class="reasons">
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Fits your budget</li>
+              <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Covers your core needs</li>
+              <li class="is-tradeoff"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-minus"></use></svg>Fewer extras</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="fineprint">This is an illustrative example with placeholder products. ProductMotive may earn a commission from some links. See our <a href="/affiliate-disclosure">Affiliate Disclosure</a>.</p>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         6. METHODOLOGY
+         ========================================================== -->
+    <section class="section section--tint" id="methodology" aria-labelledby="method-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="method-title">Recommendations should make sense.</h2>
+          <p class="section-lead">A recommendation is only useful if you can see how it was reached.</p>
+        </header>
+
+        <div class="method">
+          <article class="method-item">
+            <h3>Your requirements</h3>
+            <p>Your budget, priorities and use case set the criteria every product is measured against.</p>
+          </article>
+          <span class="method-op" aria-hidden="true">+</span>
+          <article class="method-item">
+            <h3>Product information</h3>
+            <p>Specifications, features and pricing details are compared against those criteria.</p>
+          </article>
+          <span class="method-op" aria-hidden="true">=</span>
+          <article class="method-item method-item--result">
+            <h3>Clear reasoning</h3>
+            <p>Each match explains why it fits, and where it involves a trade-off.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         7. GUIDES (data-driven, see assets/js/data.js)
+         ========================================================== -->
+    <section class="section" id="guides" aria-labelledby="guides-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div>
+            <h2 id="guides-title">Explore smarter ways to choose.</h2>
+            <p class="section-lead">Practical guides for making better decisions, whatever you’re buying.</p>
+          </div>
+          <a class="link-quiet" href="/guides">View all guides</a>
+        </header>
+
+        <ul class="guide-grid" id="guide-grid" data-component="guides">
+          <!-- Rendered from PM_DATA.guides. Static fallback for no-JS and crawlers: -->
+          <li><a href="/guides/define-what-you-need">How to define what you need before you compare</a></li>
+          <li><a href="/guides/price-and-value">Price and value: how to think about trade-offs</a></li>
+          <li><a href="/guides/compare-without-specs-overload">How to compare options without getting lost in specs</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         8. FINAL CTA
+         ========================================================== -->
+    <section class="section section--cta" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-card">
+          <h2 id="cta-title">Start with what matters to you.</h2>
+          <p>Answer a few questions and we’ll help you narrow down the options.</p>
+          <a class="btn btn--light btn--lg" href="/find-your-match">Find My Match <span class="btn-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       9. FOOTER
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="ProductMotive home">
+            <svg class="brand-mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <rect width="32" height="32" rx="9" fill="#1F2328"/>
+              <path d="M9 11l7 5-7 5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="22.5" cy="16" r="3" fill="#4FD1BF"/>
+            </svg>
+            <span class="brand-name">ProductMotive</span>
+          </a>
+          <p class="footer-tagline">Helping you choose products and software that fit your situation.</p>
+        </div>
+
+        <nav class="footer-col" aria-labelledby="footer-explore">
+          <h2 class="footer-title" id="footer-explore">Explore</h2>
+          <ul>
+            <li><a href="/how-it-works">How It Works</a></li>
+            <li><a href="/categories">Categories</a></li>
+            <li><a href="/comparisons">Comparisons</a></li>
+            <li><a href="/guides">Guides</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-labelledby="footer-company">
+          <h2 class="footer-title" id="footer-company">Company</h2>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-labelledby="footer-legal">
+          <h2 class="footer-title" id="footer-legal">Legal</h2>
+          <ul>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/affiliate-disclosure">Affiliate Disclosure</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> ProductMotive. All rights reserved.</p>
+        <p>ProductMotive may earn a commission from qualifying purchases made through links on this site.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================
+       COMPONENT TEMPLATES
+       Edit the markup here; data comes from assets/js/data.js
+       ========================================================== -->
+  <template id="tpl-category">
+    <li class="cat-item">
+      <article class="cat-card">
+        <div class="cat-top">
+          <span class="cat-icon"><svg class="icon" aria-hidden="true" focusable="false"><use data-slot="icon" href="#i-grid"></use></svg></span>
+          <svg class="icon cat-arrow" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg>
+        </div>
+        <h3 class="cat-name"><a class="stretched" data-slot="link" href="/find-your-match"></a></h3>
+        <p class="cat-desc" data-slot="description"></p>
+        <p class="cat-examples" data-slot="examples"></p>
+      </article>
+    </li>
+  </template>
+
+  <template id="tpl-guide">
+    <li class="guide-item">
+      <article class="guide-card">
+        <div class="guide-cover" data-slot="cover" aria-hidden="true">
+          <span class="guide-cover-icon"><svg class="icon" focusable="false"><use data-slot="icon" href="#i-target"></use></svg></span>
+        </div>
+        <div class="guide-body">
+          <p class="guide-tag" data-slot="tag"></p>
+          <h3 class="guide-title"><a class="stretched" data-slot="link" href="/guides"></a></h3>
+          <p class="guide-excerpt" data-slot="excerpt"></p>
+        </div>
+      </article>
+    </li>
+  </template>
+
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Free AI Resources | Get Your Resource Pack</title>
+
+  <meta
+    name="description"
+    content="Get my free collection of AI resources, tools, prompts, guides and useful AI materials."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #050816;
+      --card: #0d1224;
+      --card2: #11182e;
+      --white: #ffffff;
+      --muted: #9ca8bd;
+      --purple: #8b5cf6;
+      --blue: #3b82f6;
+      --cyan: #22d3ee;
+      --green: #4ade80;
+      --border: rgba(255,255,255,.10);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--white);
+      background:
+        radial-gradient(
+          circle at 15% 10%,
+          rgba(139, 92, 246, .18),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(34, 211, 238, .12),
+          transparent 28%
+        ),
+        linear-gradient(180deg, #050816 0%, #070b19 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Background grid */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .35;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,.025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.025) 1px,
+          transparent 1px
+        );
+
+      background-size: 55px 55px;
+
+      mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 85%
+      );
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    nav {
+      padding: 24px 0;
+      position: relative;
+      z-index: 5;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -.5px;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 12px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--purple),
+          var(--blue)
+        );
+
+      box-shadow:
+        0 8px 30px rgba(99,102,241,.35);
+    }
+
+    .nav-link {
+      color: #d9e0ec;
+      text-decoration: none;
+
+      padding: 10px 17px;
+
+      border: 1px solid var(--border);
+      border-radius: 999px;
+
+      background: rgba(255,255,255,.035);
+
+      font-size: 13px;
+      font-weight: 600;
+
+      transition: .25s;
+    }
+
+    .nav-link:hover {
+      background: rgba(255,255,255,.08);
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      padding: 70px 0 90px;
+    }
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1fr)
+        minmax(400px, 500px);
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 8px 13px;
+
+      border-radius: 999px;
+
+      background: rgba(139,92,246,.09);
+      border: 1px solid rgba(139,92,246,.25);
+
+      color: #c4b5fd;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      margin-bottom: 22px;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+
+      background: #a78bfa;
+
+      border-radius: 50%;
+
+      box-shadow: 0 0 12px #a78bfa;
+    }
+
+    h1 {
+      font-size: clamp(43px, 5.5vw, 70px);
+
+      line-height: 1.02;
+
+      letter-spacing: -3.5px;
+
+      margin-bottom: 25px;
+    }
+
+    .gradient {
+      background:
+        linear-gradient(
+          100deg,
+          #a78bfa,
+          #60a5fa,
+          #22d3ee
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .hero-text {
+      color: var(--muted);
+
+      font-size: 18px;
+
+      line-height: 1.75;
+
+      max-width: 610px;
+
+      margin-bottom: 30px;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 12px;
+
+      max-width: 600px;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      padding: 12px 14px;
+
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.035);
+
+      border-radius: 11px;
+
+      color: #dbe2ed;
+
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .check {
+      width: 22px;
+      height: 22px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      color: #07110a;
+      background: var(--green);
+
+      font-size: 12px;
+      font-weight: 900;
+
+      flex-shrink: 0;
+    }
+
+    /* =========================
+       FORM
+    ========================= */
+
+    .form-area {
+      position: relative;
+    }
+
+    .form-glow {
+      position: absolute;
+
+      inset: -50px;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(124,58,237,.25),
+          transparent 65%
+        );
+
+      filter: blur(30px);
+
+      z-index: -1;
+    }
+
+    .form-card {
+      background:
+        linear-gradient(
+          145deg,
+          rgba(17,24,46,.96),
+          rgba(8,12,28,.96)
+        );
+
+      border: 1px solid rgba(255,255,255,.12);
+
+      border-radius: 26px;
+
+      padding: 27px;
+
+      box-shadow:
+        0 35px 90px rgba(0,0,0,.4),
+        inset 0 1px 0 rgba(255,255,255,.06);
+    }
+
+    .form-heading {
+      text-align: center;
+
+      margin-bottom: 10px;
+    }
+
+    .gift {
+      width: 60px;
+      height: 60px;
+
+      display: grid;
+      place-items: center;
+
+      margin: 0 auto 15px;
+
+      border-radius: 17px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(139,92,246,.20),
+          rgba(34,211,238,.10)
+        );
+
+      font-size: 29px;
+    }
+
+    .form-heading h2 {
+      font-size: 25px;
+      letter-spacing: -.8px;
+
+      margin-bottom: 8px;
+    }
+
+    .form-heading p {
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .tally-wrapper {
+      margin-top: 12px;
+      width: 100%;
+    }
+
+    .tally-wrapper iframe {
+      width: 100%;
+      border: 0;
+
+      display: block;
+
+      min-height: 430px;
+    }
+
+    /* =========================
+       SOCIAL PROOF / INFO
+    ========================= */
+
+    .divider {
+      border-top: 1px solid var(--border);
+    }
+
+    .resources {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+
+      max-width: 680px;
+
+      margin: 0 auto 50px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(32px, 4vw, 46px);
+
+      letter-spacing: -2px;
+
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+
+      line-height: 1.7;
+
+      font-size: 16px;
+    }
+
+    .resource-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .resource {
+      padding: 27px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 19px;
+
+      background:
+        rgba(255,255,255,.035);
+
+      transition: .25s;
+    }
+
+    .resource:hover {
+      transform: translateY(-5px);
+
+      border-color:
+        rgba(139,92,246,.35);
+
+      background:
+        rgba(255,255,255,.055);
+    }
+
+    .resource-icon {
+      font-size: 27px;
+
+      margin-bottom: 18px;
+    }
+
+    .resource h3 {
+      font-size: 18px;
+
+      margin-bottom: 9px;
+    }
+
+    .resource p {
+      color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.7;
+    }
+
+    /* =========================
+       HOW IT WORKS
+    ========================= */
+
+    .how {
+      padding: 20px 0 100px;
+    }
+
+    .steps {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .step {
+      text-align: center;
+
+      padding: 30px 20px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 18px;
+
+      background: rgba(255,255,255,.025);
+    }
+
+    .step-number {
+      width: 44px;
+      height: 44px;
+
+      display: grid;
+      place-items: center;
+
+      margin: 0 auto 18px;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--purple),
+          var(--blue)
+        );
+
+      font-weight: 800;
+    }
+
+    .step h3 {
+      margin-bottom: 9px;
+    }
+
+    .step p {
+      color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.65;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .bottom-cta {
+      padding: 0 0 90px;
+    }
+
+    .cta {
+      text-align: center;
+
+      padding: 65px 25px;
+
+      border-radius: 28px;
+
+      border: 1px solid rgba(139,92,246,.25);
+
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(139,92,246,.20),
+          transparent 55%
+        ),
+        rgba(255,255,255,.035);
+    }
+
+    .cta h2 {
+      font-size: clamp(30px, 4vw, 45px);
+
+      letter-spacing: -2px;
+
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: var(--muted);
+
+      max-width: 570px;
+
+      margin: 0 auto 28px;
+
+      line-height: 1.7;
+    }
+
+    .cta-button {
+      display: inline-block;
+
+      color: white;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      padding: 14px 23px;
+
+      border-radius: 11px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #7c3aed,
+          #2563eb
+        );
+
+      box-shadow:
+        0 12px 30px rgba(79,70,229,.3);
+
+      transition: .25s;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 16px 38px rgba(79,70,229,.4);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      border-top: 1px solid var(--border);
+
+      padding: 28px 0;
+
+      color: #68748a;
+
+      font-size: 13px;
+
+      text-align: center;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .hero {
+        padding-top: 45px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .benefits {
+        margin: auto;
+      }
+
+      .form-area {
+        max-width: 570px;
+        width: 100%;
+
+        margin: auto;
+      }
+
+      .resource-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: min(
+          calc(100% - 24px),
+          1120px
+        );
+      }
+
+      nav {
+        padding: 17px 0;
+      }
+
+      .nav-link {
+        display: none;
+      }
+
+      h1 {
+        font-size: 43px;
+        letter-spacing: -2.5px;
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
+
+      .benefits {
+        grid-template-columns: 1fr;
+      }
+
+      .form-card {
+        padding: 17px;
+        border-radius: 21px;
+      }
+
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tally-wrapper iframe {
+        min-height: 470px;
+      }
+
+      .cta {
+        padding: 45px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+    <div class="container nav">
+
+      <div class="logo">
+        <div class="logo-icon">✦</div>
+        <span>AI Resources</span>
+      </div>
+
+      <a href="#resources" class="nav-link">
+        What's Included
+      </a>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container hero-grid">
+
+      <!-- LEFT SIDE -->
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          FREE AI RESOURCES
+        </div>
+
+        <h1>
+          Get my
+          <span class="gradient">
+            AI Resource Pack
+          </span>
+          for free.
+        </h1>
+
+        <p class="hero-text">
+          I've put together a collection of useful AI resources,
+          tools, prompts, guides and other materials to help you
+          get more out of AI.
+        </p>
+
+
+        <div class="benefits">
+
+          <div class="benefit">
+            <span class="check">✓</span>
+            Useful AI Tools
+          </div>
+
+          <div class="benefit">
+            <span class="check">✓</span>
+            Ready-to-use Prompts
+          </div>
+
+          <div class="benefit">
+            <span class="check">✓</span>
+            AI Guides & Cheat Sheets
+          </div>
+
+          <div class="benefit">
+            <span class="check">✓</span>
+            Practical AI Resources
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT SIDE / TALLY -->
+
+      <div class="form-area">
+
+        <div class="form-glow"></div>
+
+        <div class="form-card">
+
+          <div class="form-heading">
+
+            <div class="gift">
+              🎁
+            </div>
+
+            <h2>
+              Get Free Access
+            </h2>
+
+            <p>
+              Enter your details below and get
+              access to the resources.
+            </p>
+
+          </div>
+
+
+          <!-- TALLY EMBED -->
+
+          <div class="tally-wrapper">
+
+            <iframe
+              src="https://tally.so/embed/44ZVgd?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+              loading="lazy"
+              title="Get Free AI Resources">
+            </iframe>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- RESOURCES -->
+
+  <section class="resources divider" id="resources">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>
+          What's inside the
+          <span class="gradient">
+            resource pack?
+          </span>
+        </h2>
+
+        <p>
+          A collection of practical resources designed to
+          help you learn, experiment with and use AI.
+        </p>
+
+      </div>
+
+
+      <div class="resource-grid">
+
+        <div class="resource">
+
+          <div class="resource-icon">🤖</div>
+
+          <h3>AI Tools</h3>
+
+          <p>
+            Useful AI tools and platforms that can help
+            with productivity, research, content and more.
+          </p>
+
+        </div>
+
+
+        <div class="resource">
+
+          <div class="resource-icon">🧠</div>
+
+          <h3>AI Prompts</h3>
+
+          <p>
+            Practical prompts and prompt ideas you can
+            adapt for your own AI workflows.
+          </p>
+
+        </div>
+
+
+        <div class="resource">
+
+          <div class="resource-icon">📚</div>
+
+          <h3>AI Guides</h3>
+
+          <p>
+            Helpful guides, references and cheat sheets
+            for learning and using AI.
+          </p>
+
+        </div>
+
+
+        <div class="resource">
+
+          <div class="resource-icon">⚡</div>
+
+          <h3>Automation</h3>
+
+          <p>
+            Resources for discovering how AI can be
+            incorporated into everyday workflows.
+          </p>
+
+        </div>
+
+
+        <div class="resource">
+
+          <div class="resource-icon">💡</div>
+
+          <h3>Ideas & Examples</h3>
+
+          <p>
+            Practical examples and ideas to help you
+            find useful applications for AI.
+          </p>
+
+        </div>
+
+
+        <div class="resource">
+
+          <div class="resource-icon">🚀</div>
+
+          <h3>More Resources</h3>
+
+          <p>
+            Additional resources and useful material
+            collected in one convenient place.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+
+  <section class="how">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>
+          Get your resources in
+          <span class="gradient">3 steps</span>
+        </h2>
+
+      </div>
+
+
+      <div class="steps">
+
+        <div class="step">
+
+          <div class="step-number">
+            1
+          </div>
+
+          <h3>
+            Enter your details
+          </h3>
+
+          <p>
+            Fill out the short form above
+            with your information.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            2
+          </div>
+
+          <h3>
+            Submit the form
+          </h3>
+
+          <p>
+            Submit your details and your
+            request will be recorded.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            3
+          </div>
+
+          <h3>
+            Access the resources
+          </h3>
+
+          <p>
+            You'll be redirected to the page
+            where you can access the resources.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BOTTOM CTA -->
+
+  <section class="bottom-cta">
+
+    <div class="container">
+
+      <div class="cta">
+
+        <h2>
+          Ready to explore AI?
+        </h2>
+
+        <p>
+          Get the free resource pack and start
+          exploring practical AI tools, prompts
+          and learning materials.
+        </p>
+
+        <a
+          href="#top"
+          class="cta-button"
+          onclick="window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          }); return false;"
+        >
+          Get Free Resources →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+      © 2026 AI Resources. All rights reserved.
+    </div>
+
+  </footer>
+
+</body>
+</html>
