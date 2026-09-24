@@ -1,7 +1,7 @@
 /* ==========================================================================
    ProductMotive: web hosting landing (web-hosting.html)
    An edge-case quiz → scored shortlist → comparison table + host cards.
-   All content comes from PM_DATA.hosting (see assets/js/data.js).
+   All content comes from PM_DATA.hosting (see assets/js/data-hosting.js).
    No dependencies. Loaded with `defer`.
    ========================================================================== */
 (function () {
@@ -207,12 +207,27 @@
   function rankByType() {
     var rankings = ranked();
     var bt = bestType();
-    var sameType = rankings.filter(function (r) {
-      return (r.host.typeCat || []).indexOf(bt.type.id) !== -1;
-    });
+    var ofType = function (r) { return (r.host.typeCat || []).indexOf(bt.type.id) !== -1; };
+    var sameType = rankings.filter(ofType);
     var primary = sameType[0] || rankings[0];
-    var alt = sameType[1] || rankings.filter(function (r) { return r.host.slug !== primary.host.slug; })[0];
-    return { bt: bt, primary: primary, alt: alt };
+
+    /* Alternative: prefer another host of the same type; otherwise step
+       through the winning type's altPriority list so the alternative card
+       never contradicts the type banner silently. */
+    var pool = rankings.filter(function (r) { return r.host.slug !== primary.host.slug; });
+    var sameAlt = pool.filter(ofType);
+    var alt = null;
+    var altSameType = sameAlt.length > 0;
+    if (altSameType) {
+      alt = sameAlt[0];
+    } else {
+      var order = (bt.type.altPriority || []).filter(function (t) { return t !== bt.type.id; });
+      alt = pool.filter(function (r) {
+        var rc = r.host.typeCat || [];
+        return order.some(function (t) { return rc.indexOf(t) !== -1; });
+      })[0] || pool[0];
+    }
+    return { bt: bt, primary: primary, alt: alt, altSameType: altSameType };
   }
 
   /* Results -------------------------------------------------------------- */
@@ -229,23 +244,56 @@
 
   /* Plan pick: which plan inside the recommended host fits best ----------- */
 
+  /* Plan pick. Capacity-critical answers (traffic, sites, budget) are hard
+     stops: a plan that contradicts them is skipped, so we never undersize
+     (or oversell) a user. What's left is scored by how much each matching
+     answer shapes a plan — a "traffic: high" plan beats a cheaper entry
+     plan every time. */
+  var PLAN_WEIGHTS = { traffic: 40, sites: 30, budget: 30, use: 20, skill: 20, platform: 10 };
+
   function topPlan(host) {
     var plans = host.plans || [];
     var best = null;
     var bestVal = -1;
     plans.forEach(function (p) {
-      var matched = 0;
-      var total = 0;
       var when = p.when || {};
+      var val = 0;
+      var total = 0;
+      var matched = 0;
       for (var k in when) {
-        if (when.hasOwnProperty(k)) {
-          total++;
-          if (answers[k] === when[k]) matched++;
+        if (!when.hasOwnProperty(k)) continue;
+        total++;
+        if (PLAN_WEIGHTS[k] && answers[k] !== when[k]) return;
+        if (answers[k] === when[k]) {
+          matched++;
+          val += PLAN_WEIGHTS[k] || 10;
         }
       }
-      var val = matched * 10 + (matched === total && total > 0 ? 1 : 0) + (p.popular ? .01 : 0);
+      if (matched === total && total > 0) val += 5;
+      if (p.popular) val += 0.01;
       if (val > bestVal) { bestVal = val; best = p; }
     });
+    if (!best) {
+      /* No exact (hard-stop respected) match: fall back to the plan that
+         matches the most answers on a purely weighted basis. */
+      plans.forEach(function (p) {
+        var when = p.when || {};
+        var val = 0;
+        var total = 0;
+        var matched = 0;
+        for (var k in when) {
+          if (!when.hasOwnProperty(k)) continue;
+          total++;
+          if (answers[k] === when[k]) {
+            matched++;
+            val += PLAN_WEIGHTS[k] || 10;
+          }
+        }
+        if (matched === total && total > 0) val += 3;
+        if (p.popular) val += 0.01;
+        if (val > bestVal) { bestVal = val; best = p; }
+      });
+    }
     return best || (plans[0] || null);
   }
 
@@ -256,7 +304,7 @@
 
     var label = document.createElement("p");
     label.className = "plan-label";
-    label.textContent = "Which plan fits";
+    label.textContent = "Which plan fits · typical first-term price";
     wrap.appendChild(label);
 
     var list = document.createElement("ul");
@@ -273,6 +321,10 @@
       name.className = "plan-name";
       name.textContent = p.name;
 
+      var price = document.createElement("span");
+      price.className = "plan-price";
+      price.textContent = p.price || "";
+
       var tag = document.createElement("span");
       tag.className = "plan-tag";
       tag.textContent = p.tag || "";
@@ -283,21 +335,31 @@
 
       li.appendChild(check);
       li.appendChild(name);
+      li.appendChild(price);
       li.appendChild(tag);
       li.appendChild(note);
       list.appendChild(li);
     });
     wrap.appendChild(list);
+
+    if (host.budget !== "free" && (host.plans || []).length) {
+      var foot = document.createElement("p");
+      foot.className = "plan-foot";
+      foot.textContent = "Typical U.S. first-term pricing; renewal rates differ — see the comparison table.";
+      wrap.appendChild(foot);
+    }
     return wrap;
   }
 
-  function ctaLink(host) {
+  function ctaLink(host, plan) {
     var a = document.createElement("a");
     a.className = "btn btn--primary match-cta";
     a.href = host.aff || host.url;
     a.target = "_blank";
-    a.rel = "sponsored nofollow noopener";
-    a.appendChild(document.createTextNode("Get " + host.name + " "));
+    a.rel = host.aff ? "sponsored nofollow noopener" : "nofollow noopener";
+    var text = host.cta || ("Get " + host.name);
+    if (plan && host.aff) text += " · " + plan.name;
+    a.appendChild(document.createTextNode(text + " "));
     var arrow = document.createElement("span");
     arrow.className = "btn-arrow";
     arrow.setAttribute("aria-hidden", "true");
@@ -306,7 +368,7 @@
     return a;
   }
 
-  function buildMatch(primary, alt, host, kicker, badgeText) {
+  function buildMatch(primary, alt, host, kicker, badgeText, altSameType) {
     var art = document.createElement("article");
     art.className = "match" + (primary ? " match--primary" : "");
 
@@ -332,7 +394,7 @@
     h3.textContent = host.name;
     var sub = document.createElement("p");
     sub.className = "match-sub";
-    sub.textContent = primary ? host.tagline : host.bestFor;
+    sub.textContent = primary ? host.tagline : (host.type + " · " + host.bestFor);
     names.appendChild(h3);
     names.appendChild(sub);
     head.appendChild(names);
@@ -340,18 +402,28 @@
 
     var ul = document.createElement("ul");
     ul.className = "reasons";
-    [primary ? "Top overall fit for your answers" : "Strong runner-up for your answers",
-     host.reason,
-     "Sits comfortably in your " + (optionLabel("budget", answers.budget) || "budget").toLowerCase() + " preference",
-     "Suits your experience level: " + (optionLabel("skill", answers.skill) || "all levels").toLowerCase()]
-      .filter(function (t) { return t; })
-      .forEach(function (t) { ul.appendChild(reasonItem(false, "check", t)); });
+    var budgetClass = cfg.budgetClass || { minimum: 1, standard: 2, premium: 3 };
+    var priceClass = typeof host.priceClass === "number" ? host.priceClass : 2;
+    var band = answers.budget || "budget";
+    var priceOk = priceClass <= (budgetClass[answers.budget] || 2);
+    var reasons = [
+      { text: primary ? "Top overall fit for your answers" : "Strong alternative for your answers" },
+      { text: host.reason },
+      { text: priceOk ? "Sits within your " + band + " budget band" : "Priced above your " + band + " budget band — weigh the alternative", tradeoff: !priceOk },
+      { text: "Suits your experience level: " + (optionLabel("skill", answers.skill) || "all levels").toLowerCase() }
+    ];
+    if (!primary && altSameType === false) {
+      reasons.splice(2, 0, { text: "A step across type — a neighbouring fit worth comparing" });
+    }
+    reasons.forEach(function (r) {
+      ul.appendChild(reasonItem(!!r.tradeoff, r.tradeoff ? "minus" : "check", r.text));
+    });
     ul.appendChild(reasonItem(true, "minus", host.tradeoff));
     art.appendChild(ul);
 
     art.appendChild(buildPlanBox(host));
 
-    art.appendChild(ctaLink(host));
+    art.appendChild(ctaLink(host, topPlan(host)));
     return art;
   }
 
@@ -364,7 +436,7 @@
     return span;
   }
 
-  function renderTypeBanner(bt) {
+  function renderTypeBanner(bt, primaryHost) {
     if (!hzType) return;
     hzType.textContent = "";
 
@@ -395,23 +467,52 @@
 
     var call = document.createElement("p");
     call.className = "type-call";
-    call.textContent = "That is the category to buy in. Here is the strongest host of that type — and a solid alternative:";
+    call.textContent = bt.type.id === "static"
+      ? "That is the right home for your site — the pick below is free, with a paid alternative if you later need email, forms or a database."
+      : "That is the category to buy in. Here is the strongest host of that type — and a compatible alternative:";
     card.appendChild(call);
 
     hzType.appendChild(card);
 
-    (cfg.checklist || []).slice(0, 2).forEach(function (c) {
-      if (!matchWhen(c.when)) return;
+    var budgetClass = cfg.budgetClass || { minimum: 1, standard: 2, premium: 3 };
+    var chosenClass = budgetClass[answers.budget] || 2;
+    var sameTypeList = hosts.filter(function (h) {
+      return (h.typeCat || []).indexOf(bt.type.id) !== -1;
+    });
+    var prim = primaryHost || sameTypeList[0];
+    var primClass = prim && typeof prim.priceClass === "number" ? prim.priceClass : 2;
+
+    function addWarn(strongText, text) {
       var w = document.createElement("div");
       w.className = "fit-warn";
       var strong = document.createElement("strong");
-      strong.textContent = "Worth flagging";
+      strong.textContent = strongText;
       w.appendChild(strong);
-      var text = document.createElement("span");
-      text.textContent = " " + c.text;
-      w.appendChild(text);
+      var span = document.createElement("span");
+      span.textContent = " " + text;
+      w.appendChild(span);
       hzType.appendChild(w);
-    });
+    }
+
+    (cfg.checklist || [])
+      .map(function (c, ci) { return { c: c, ci: ci, keys: Object.keys(c.when || {}).length }; })
+      .filter(function (m) { return matchWhen(m.c.when); })
+      .sort(function (a, b) { return b.keys - a.keys || a.ci - b.ci; })
+      .slice(0, 3)
+      .forEach(function (m) { addWarn("Worth flagging", m.c.text); });
+
+    if (prim && primClass > chosenClass) {
+      var onlyHost = sameTypeList.length === 1;
+      addWarn("Priced above your budget band",
+        prim.name + " is priced " + (prim.budgetTag || "").toLowerCase() +
+        (onlyHost ? " and it's the only " + bt.type.name.toLowerCase() + " we compare" : "") +
+        ". You chose the " + (answers.budget || "standard") + " band — if that overshoots, weigh the alternative card and the budget rows in the comparison table before committing.");
+    }
+
+    if (sameTypeList.length === 1 && primClass <= chosenClass) {
+      addWarn("One option in this tier",
+        prim.name + " is the only " + bt.type.name.toLowerCase() + " we compare. The alternative card shows the closest cross-type competitor — compare it before committing.");
+    }
   }
 
   function renderResults() {
@@ -438,11 +539,11 @@
     matchResults.textContent = "";
     if (!sel.primary) return;
 
-    renderTypeBanner(sel.bt);
+    renderTypeBanner(sel.bt, sel.primary.host);
 
     matchResults.appendChild(buildMatch(true, !!sel.alt, sel.primary.host, "Your recommendation", "Top match"));
     if (sel.alt && sel.alt.host.slug !== sel.primary.host.slug) {
-      matchResults.appendChild(buildMatch(false, false, sel.alt.host, "Alternative", "Good match"));
+      matchResults.appendChild(buildMatch(false, false, sel.alt.host, "Alternative", "Good match", sel.altSameType));
     }
   }
 
@@ -479,7 +580,13 @@
 
       var tdBudget = document.createElement("td");
       tdBudget.setAttribute("data-label", "Budget");
-      tdBudget.textContent = host.budgetTag;
+      tdBudget.appendChild(document.createTextNode(host.budgetTag));
+      if (host.renewal) {
+        var ren = document.createElement("span");
+        ren.className = "cmp-renew";
+        ren.textContent = host.renewal;
+        tdBudget.appendChild(ren);
+      }
 
       var tdCta = document.createElement("td");
       tdCta.setAttribute("data-label", "Get started");
@@ -487,8 +594,8 @@
       a.className = "btn btn--sm btn--primary";
       a.href = host.aff || host.url;
       a.target = "_blank";
-      a.rel = "sponsored nofollow noopener";
-      a.textContent = "Get started";
+      a.rel = host.aff ? "sponsored nofollow noopener" : "nofollow noopener";
+      a.textContent = host.cta || "Get started";
       tdCta.appendChild(a);
 
       tr.appendChild(tdHost);

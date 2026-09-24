@@ -21,7 +21,7 @@
    ========================================================================== */
 
 window.PM_DATA = {
-  ctaHref: "find-your-match.html",
+  ctaHref: "web-hosting.html",
 
   categories: [
     {
@@ -108,7 +108,7 @@ window.PM_DATA = {
     any: {
       id: "any",
       name: "Any category",
-      description: "Keep it open â€” show me what fits best.",
+      description: "Keep it open — show me what fits best.",
       icon: "grid"
     },
     priorities: [
@@ -122,14 +122,14 @@ window.PM_DATA = {
     budgets: {
       goods: [
         { id: "under-100", label: "Under $100", note: "Budget-friendly" },
-        { id: "100-300", label: "$100â€“$300", note: "Solid mid-range" },
-        { id: "300-700", label: "$300â€“$700", note: "Well-equipped" },
+        { id: "100-300", label: "$100–$300", note: "Solid mid-range" },
+        { id: "300-700", label: "$300–$700", note: "Well-equipped" },
         { id: "700-plus", label: "$700+", note: "Premium" }
       ],
       subscription: [
         { id: "free", label: "Free", note: "Free tier" },
         { id: "under-20", label: "Under $20/mo", note: "Lean" },
-        { id: "20-60", label: "$20â€“$60/mo", note: "Team-ready" },
+        { id: "20-60", label: "$20–$60/mo", note: "Team-ready" },
         { id: "60-plus", label: "$60+/mo", note: "Enterprise" }
       ]
     },

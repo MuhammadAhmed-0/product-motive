@@ -374,7 +374,6 @@
     var prios = state.priorities.map(labelById);
 
     var top = prios.slice(0, 1)[0] || "your priorities";
-    var second = prios.slice(1, 2)[0] || "a secondary priority";
 
     reqSummary.textContent = "";
     var mk = function (k, v) {
@@ -393,23 +392,31 @@
 
     matchResults.textContent = "";
 
-    matchResults.appendChild(matchCard("primary", "Example Match", cat.name + " · " + (budget ? budget.label : "open budget"), [
-      { text: "Fits your budget (" + budget.label + ")" },
-      { text: "Matches your top priority: " + top },
-      { text: "Fits your use case: " + (use || "general use") }
+    matchResults.appendChild(matchCard("primary", "Web hosting, scored end to end", "Web hosting is the one category with complete product data — your answers there become a real, costed shortlist, not a preview.", [
+      { text: "Fits your budget (" + (budget ? budget.label : "any") + ")" },
+      { text: "Built around your top priority: " + top },
+      { text: "For " + (use || "general use") },
+      { text: "Every category routes here until its own match data ships", tradeoff: true }
     ]));
 
-    matchResults.appendChild(matchCard("alt", "Example Alternative", "Different balance of features", [
-      { text: "Fits your use case: " + (use || "general use") },
-      { text: "Strong on " + second },
-      { text: "Slightly above your budget", tradeoff: true }
-    ]));
-
-    matchResults.appendChild(matchCard("budget", "Example Budget Pick", "Lower cost entry point", [
-      { text: "Fits your budget (" + budget.label + ")" },
-      { text: "Covers your core needs" },
-      { text: "Thinner on " + second, tradeoff: true }
-    ]));
+    var foot = document.createElement("div");
+    foot.className = "match-foot";
+    var a = document.createElement("a");
+    a.className = "btn btn--primary";
+    a.href = "web-hosting.html";
+    a.textContent = "Run the full web hosting match";
+    var arrow = document.createElement("span");
+    arrow.className = "btn-arrow";
+    arrow.setAttribute("aria-hidden", "true");
+    arrow.textContent = "\u2192";
+    a.appendChild(document.createTextNode(" "));
+    a.appendChild(arrow);
+    foot.appendChild(a);
+    var note = document.createElement("p");
+    note.className = "match-footnote";
+    note.textContent = "Answer six questions about your site, traffic and skills and the web hosting engine scores every provider (free static included) against your exact answers.";
+    foot.appendChild(note);
+    matchResults.appendChild(foot);
   }
 
   /* Boot ----------------------------------------------------------------- */

@@ -9,7 +9,7 @@
   "use strict";
 
   var data = window.PM_DATA;
-  var CTA = (data && data.ctaHref) || "find-your-match.html";
+  var CTA = (data && data.ctaHref) || "web-hosting.html";
 
   /* 1. Nav dropdown -------------------------------------------------------- */
 
@@ -22,12 +22,12 @@
          and add the page link here too. */
   var FALLBACK_CATEGORIES = [
     { name: "Web Hosting", href: "web-hosting.html" },
-    { name: "Technology", href: "find-your-match.html?category=technology" },
-    { name: "Home & Office", href: "find-your-match.html?category=home-office" },
-    { name: "Software", href: "find-your-match.html?category=software" },
-    { name: "Business", href: "find-your-match.html?category=business" },
-    { name: "Travel", href: "find-your-match.html?category=travel" },
-    { name: "Lifestyle", href: "find-your-match.html?category=lifestyle" }
+    { name: "Technology", href: "web-hosting.html" },
+    { name: "Home & Office", href: "web-hosting.html" },
+    { name: "Software", href: "web-hosting.html" },
+    { name: "Business", href: "web-hosting.html" },
+    { name: "Travel", href: "web-hosting.html" },
+    { name: "Lifestyle", href: "web-hosting.html" }
   ];
 
   function navCategories(prefix) {
