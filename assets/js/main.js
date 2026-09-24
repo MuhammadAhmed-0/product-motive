@@ -11,7 +11,7 @@
   var data = window.PM_DATA;
   if (!data) return;
 
-  var CTA = data.ctaHref || "/find-your-match";
+  var CTA = data.ctaHref || "find-your-match.html";
 
   /* 1. Components ---------------------------------------------------------- */
 
@@ -55,7 +55,7 @@
 
     var link = slot(el, "link");
     link.textContent = cat.name;
-    link.href = CTA + "?category=" + encodeURIComponent(cat.id);
+    link.href = cat.href || (CTA + "?category=" + encodeURIComponent(cat.id));
 
     slot(el, "description").textContent = cat.description || "";
 

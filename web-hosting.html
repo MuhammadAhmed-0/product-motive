@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Web Hosting Guide &amp; Match – Find the Right Host for Your Site | ProductMotive</title>
+  <meta name="description" content="Six quick questions about your site, traffic and skills. ProductMotive shortlists the best web host for you — shared, VPS or managed WordPress — with clear reasons and honest trade-offs.">
+  <link rel="canonical" href="https://productmotive.com/web-hosting.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#F8F8F5">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ProductMotive">
+  <meta property="og:title" content="Web Hosting Guide &amp; Match | ProductMotive">
+  <meta property="og:description" content="Answer six questions and get a shortlist of the best web hosts for your site — with honest trade-offs.">
+  <meta property="og:url" content="https://productmotive.com/web-hosting.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between shared and VPS hosting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "With shared hosting your site runs on a server alongside many others, which keeps costs low but leaves you limited on resources. A VPS (virtual private server) gives you a dedicated slice of a server, with far more control and power. Choose shared for small or simple sites; choose VPS when you need performance, custom software or steady growth."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is cheap hosting fine for a small blog?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. For a personal blog or portfolio, budget shared hosting from providers like Hostinger, HostGator, InterServer or Verpex is usually enough. Just check the renewal price before you buy, because intro rates are often much lower than what you'll pay the next year."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need managed WordPress hosting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Only if your WordPress site pays for itself. Managed WordPress hosting (like WP Engine or Cloudways) adds automatic updates, security, staging and faster loading, but it costs several times more than shared hosting. It's worth it for business sites, online stores and agencies, not for a hobby blog."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I move hosts later if I chose badly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Almost always, yes. Moving a site is normal, and most hosts offer free migration for WordPress sites. It's better to start on a host that fits your stage today than to overpay for headroom you don't need. Keep your domain name registered separately from your hosting to make a move painless."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which hosting should a developer choose?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you're comfortable on the command line and running your own servers, a cloud VPS like DigitalOcean gives you the most control for a predictable price. If you'd rather not maintain servers yourself, a managed cloud platform such as Cloudways gives you similar power with the sysadmin work handled."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231F2328'/%3E%3Cpath d='M9 11l7 5-7 5' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='22.5' cy='16' r='3' fill='%234FD1BF'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M6 12h12"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="6.5" rx="1.6"/><rect x="3.5" y="13.5" width="17" height="6.5" rx="1.6"/><path d="M7 7.25h.01M7 16.75h.01"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></symbol>
+  </svg>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="ProductMotive home">
+        <svg class="brand-mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="9" fill="#1F2328"/>
+          <path d="M9 11l7 5-7 5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="22.5" cy="16" r="3" fill="#4FD1BF"/>
+        </svg>
+        <span class="brand-name">ProductMotive</span>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary" data-nav>
+        <ul class="nav-list">
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="guides.html">Guides</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm" href="web-hosting.html" aria-current="page">Web Hosting <span class="btn-arrow" aria-hidden="true">→</span></a>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+        <span class="sr-only">Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero page-hero--condensed" aria-labelledby="hz-title">
+      <div class="container">
+        <p class="eyebrow"><svg class="icon" width="1em" height="1em" aria-hidden="true" focusable="false"><use href="#i-server"></use></svg> Web Hosting</p>
+        <h1 id="hz-title">Find the web host your site actually needs</h1>
+        <p class="lead">Shared, VPS, cloud or managed WordPress — the right answer depends on your site, your skills and your budget. Answer six questions and we'll score all eight hosts we compare against your exact situation.</p>
+        <p class="crumb"><a href="index.html">Home</a> / <a href="categories.html">Categories</a> / Web Hosting</p>
+      </div>
+    </section>
+
+    <!-- Quiz -->
+    <section class="section" aria-labelledby="quiz-title">
+      <div class="container">
+        <div class="quiz-shell">
+          <div class="quiz-progress">
+            <div class="quiz-steps" id="hz-steps" aria-hidden="true"></div>
+            <span class="quiz-count" id="hz-count" role="status"></span>
+          </div>
+
+          <div class="quiz-card">
+            <div class="quiz-body">
+
+              <noscript>
+                <div class="callout">
+                  <p><strong>JavaScript is off.</strong> The matching quiz needs JavaScript to run. Here are the eight hosts we compare — pick by best fit:</p>
+                  <ul>
+                    <li><a href="https://www.bluehost.com">Bluehost</a> — beginner-friendly WordPress hosting</li>
+                    <li><a href="https://www.hostinger.com">Hostinger</a> — great-value shared hosting and VPS</li>
+                    <li><a href="https://www.hostgator.com">HostGator</a> — budget shared hosting on cPanel</li>
+                    <li><a href="https://www.digitalocean.com">DigitalOcean</a> — cloud VPS for developers</li>
+                    <li><a href="https://wpengine.com">WP Engine</a> — premium managed WordPress</li>
+                    <li><a href="https://www.cloudways.com">Cloudways</a> — managed cloud VPS</li>
+                    <li><a href="https://www.interserver.net">InterServer</a> — price-lock shared and VPS</li>
+                    <li><a href="https://www.verpex.com">Verpex</a> — budget shared with global data centres</li>
+                  </ul>
+                </div>
+              </noscript>
+
+              <!-- 1 · WHAT ARE YOU HOSTING -->
+              <section class="quiz-panel is-active" data-hz-panel="use" aria-labelledby="hz-q1">
+                <h2 class="quiz-step-title" id="hz-q1">What are you hosting?</h2>
+                <p class="quiz-step-copy">The kind of site decides which host makes sense. Pick the closest one — you can change any answer later.</p>
+                <div class="quiz-fields">
+                  <div class="choice-grid" id="hz-fields-use"></div>
+                </div>
+              </section>
+
+              <!-- 2 · SKILL -->
+              <section class="quiz-panel" data-hz-panel="skill" aria-labelledby="hz-q2">
+                <h2 class="quiz-step-title" id="hz-q2">How hands-on do you want to be?</h2>
+                <p class="quiz-step-copy">Be honest — a host that matches your comfort level saves you days of frustration.</p>
+                <div class="quiz-fields">
+                  <div class="choice-grid" id="hz-fields-skill"></div>
+                </div>
+              </section>
+
+              <!-- 3 · PLATFORM -->
+              <section class="quiz-panel" data-hz-panel="platform" aria-labelledby="hz-q3">
+                <h2 class="quiz-step-title" id="hz-q3">What will your site run on?</h2>
+                <p class="quiz-step-copy">WordPress, a drag-and-drop builder and a custom app need very different hosts.</p>
+                <div class="quiz-fields">
+                  <div class="choice-grid" id="hz-fields-platform"></div>
+                </div>
+              </section>
+
+              <!-- 4 · TRAFFIC -->
+              <section class="quiz-panel" data-hz-panel="traffic" aria-labelledby="hz-q4">
+                <h2 class="quiz-step-title" id="hz-q4">How much traffic do you expect?</h2>
+                <p class="quiz-step-copy">A rough range is enough — it keeps the shortlist honest without ruling out useful middle ground.</p>
+                <div class="quiz-fields">
+                  <div class="choice-grid" id="hz-fields-traffic"></div>
+                </div>
+              </section>
+
+              <!-- 5 · SITES -->
+              <section class="quiz-panel" data-hz-panel="sites" aria-labelledby="hz-q5">
+                <h2 class="quiz-step-title" id="hz-q5">How many sites will you host?</h2>
+                <p class="quiz-step-copy">One site is different from juggling a portfolio of client projects.</p>
+                <div class="quiz-fields">
+                  <div class="choice-grid" id="hz-fields-sites"></div>
+                </div>
+              </section>
+
+              <!-- 6 · BUDGET -->
+              <section class="quiz-panel" data-hz-panel="budget" aria-labelledby="hz-q6">
+                <h2 class="quiz-step-title" id="hz-q6">What's your budget preference?</h2>
+                <p class="quiz-step-copy">Price is a feature too. Pick the band you'd be comfortable with.</p>
+                <div class="quiz-fields">
+                  <div class="budget-field" id="hz-fields-budget"></div>
+                </div>
+              </section>
+
+              <!-- RESULTS -->
+              <section class="quiz-panel" data-hz-panel="results" aria-labelledby="hz-results-title">
+                <h2 class="quiz-step-title" id="hz-results-title">Your web hosting shortlist</h2>
+                <p class="quiz-step-copy">Built from your six answers. We first pin the right type of hosting — shared, VPS, managed cloud or managed WordPress — then the best host of that type and the best plan inside it.</p>
+
+                <div class="req-summary" id="hz-req-summary" style="margin-top: 24px;"></div>
+
+                <div class="type-anchor" id="hz-type" style="margin-top: 24px;"></div>
+
+                <p class="results-label results-intro">Who we'd shortlist for you</p>
+                <div class="results" id="hz-match-results"></div>
+
+                <p class="fineprint">Some links on this page are affiliate links — if you buy through them, ProductMotive may earn a commission at no extra cost to you. Rankings are based on how well each host fits your answers, never the size of that commission. See our <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
+              </section>
+
+              <div class="quiz-nav">
+                <button class="btn btn--ghost" type="button" id="hz-back" disabled>← Back</button>
+                <div class="quiz-nav-right">
+                  <button class="btn btn--ghost" type="button" id="hz-restart">Start over</button>
+                  <button class="btn btn--primary" type="button" id="hz-next" disabled><span id="hz-next-text">Continue</span> <span class="btn-arrow" aria-hidden="true">→</span></button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="callout" style="margin-top: 24px;">
+            <p><strong>How the shortlist is built:</strong> your six answers first decide the type of hosting that fits your use case — shared, VPS, managed cloud or managed WordPress. Within that type we score each host's documented strengths (and one honest trade-off) to pick your top match and an alternative, then highlight the plan inside that host that matches your answers. Anything that looks like a mismatch gets flagged up front.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison table -->
+    <section class="section section--tint" aria-labelledby="cmp-title">
+      <div class="container">
+        <div class="content-head">
+          <h2 id="cmp-title">All eight hosts, side by side</h2>
+          <p class="section-lead">The same eight providers we compare in the quiz — so you can see at a glance how they line up and jump straight to any of them.</p>
+        </div>
+
+        <div class="cmp-wrap">
+          <table class="cmp-table">
+            <thead>
+              <tr>
+                <th>Host</th>
+                <th>Type</th>
+                <th>Best for</th>
+                <th>Skill</th>
+                <th>Budget</th>
+                <th><span class="sr-only">Get started</span></th>
+              </tr>
+            </thead>
+            <tbody id="cmp-body">
+              <tr><td colspan="6"><p class="prose" style="margin:0">Loading hosts…</p></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="fineprint">Affiliate links: buying through a link here may earn ProductMotive a commission at no extra cost to you. Pricing and features change; always check the host's current plan page.</p>
+      </div>
+    </section>
+
+    <!-- Host cards -->
+    <section class="section" aria-labelledby="hosts-title">
+      <div class="container">
+        <div class="content-head">
+          <h2 id="hosts-title">Every host, honestly</h2>
+          <p class="section-lead">Pros and cons for each of the eight, written the way you'd want them told before you pay for a year up front.</p>
+        </div>
+        <div class="host-grid" id="host-grid"></div>
+      </div>
+    </section>
+
+    <!-- SEO article -->
+    <section class="section section--tint" aria-labelledby="guide-title">
+      <div class="container">
+        <div class="content-head content-head--center">
+          <p class="eyebrow">The 2-minute guide</p>
+          <h2 id="guide-title">How to choose the right web hosting (not just the cheapest)</h2>
+        </div>
+
+        <div class="prose prose--center">
+          <p>Web hosting is the battery under your website: when it's good, nobody notices; when it's bad, it's all anyone talks about. The catch is that "best hosting" doesn't exist — only the best hosting <em>for your situation</em>. A cheap shared plan is genuinely the right answer for a hobby blog, and a genuinely wrong one for an online store doing serious revenue. This guide walks you through the few decisions that matter, so the six-question quiz above feels less like a black box and more like a checklist.</p>
+
+          <h3>Start with the type of hosting, not the brand</h3>
+          <p>Every host name above is just a wrapper around one of a few real products:</p>
+          <ul>
+            <li><strong>Shared hosting</strong> — your site shares a server with many others. Cheap, easy, fine for most small sites; you're limited on resources and performance depends on your neighbours.</li>
+            <li><strong>VPS (virtual private server)</strong> — a dedicated slice of a server with guaranteed resources and root-level control. The sweet spot for developers, growing sites and custom software.</li>
+            <li><strong>Cloud hosting</strong> — your site runs on pools of servers that can spin up more power on demand. Great for traffic spikes; pricing scales with usage.</li>
+            <li><strong>Managed WordPress hosting</strong> — WordPress-specific hosting where the provider handles updates, security, backups, caching and staging. The most expensive tier, worth it mainly when your site earns money.</li>
+            <li><strong>Dedicated servers</strong> — a whole machine to yourself. Rarely needed outside high-traffic or compliance-heavy applications.</li>
+          </ul>
+          <p>Most people — including most small businesses — should be comparing the first four, and the quiz above is built around exactly that range.</p>
+
+          <h3>The five things that actually matter</h3>
+          <ol>
+            <li><strong>Support quality,</strong> not just availability. When your site goes down at 11pm, is there a live human who can help? For beginners this beats raw specs.</li>
+            <li><strong>Speed</strong> — faster hosting means a faster site, which means better rankings and fewer visitors bouncing. Modern storage (NVMe/SSD) and caching matter more than marketing buzzwords.</li>
+            <li><strong>Backups and security.</strong> Daily automated backups and free SSL should be table stakes on any plan you pay for.</li>
+            <li><strong>Room to grow.</strong> Can you upgrade without migrating to a new company? Hosting that boxes you into one tier is a trap.</li>
+            <li><strong>What you pay after the first year.</strong> The glowing price in the advert is the intro rate; the renewal is what you actually pay. Budget hosts differ a lot here, which is why we flag it on every card.</li>
+          </ol>
+
+          <h3>Shared, VPS or managed WordPress: which fits your site</h3>
+          <p>Here's the most useful shortcut we know:</p>
+          <ul>
+            <li><strong>A blog, portfolio or brochure site</strong> on WordPress or a builder → <strong>shared hosting</strong> (Hostinger or Verpex for value; Bluehost for the friendliest WordPress onboarding).</li>
+            <li><strong>A business site or store on WordPress</strong> that needs speed and reliability more than price → <strong>managed WordPress or managed cloud</strong> (WP Engine if you want the best managed layer, Cloudways if you want cloud scale without the admin).</li>
+            <li><strong>A custom app, SaaS or API</strong> built on Node, Python, PHP or a database → <strong>VPS or cloud</strong> (DigitalOcean if you run your own servers, Cloudways if you'd rather not).</li>
+            <li><strong>Value-first developer,</strong> comfortable managing things → <strong>InterServer</strong> for locked-in pricing and cheap VPS plans.</li>
+          </ul>
+          <p>Notice what this list does <em>not</em> say: it never tells you to pick the biggest plan "just in case". Buying headroom you don't need is the most common way people overpay.</p>
+
+          <h3>What the sticker price hides</h3>
+          <p>Three things quietly raise your bill on nearly every cheap plan:</p>
+          <ul>
+            <li><strong>Renewal rates.</strong> A $3/month first-year price becomes a $10–$12/month renewal. Always check the "renews at" number.</li>
+            <li><strong>Resource limits.</strong> "Unlimited" storage often has fair-use caps; cheap plans restrict databases, inodes or CPU minutes.</li>
+            <li><strong>Upsells.</strong> Domain privacy, premium backups, higher support tiers and "security" add-ons are sold at checkout. Say no until you actually hit a limit.</li>
+          </ul>
+          <p>The good news: a wrong pick is rarely permanent. Most hosts migrate WordPress sites free, and moving later is routine. Don't let analysis paralysis replace starting.</p>
+
+          <h3>How ProductMotive picks your shortlist</h3>
+          <p>The quiz above scores all eight providers against your answers — the type of site, your technical comfort, the platform, expected traffic, number of sites and budget band. Each host carries its own strengths (the reasons you see on the card) and a single honest drawback. The best-scoring host becomes your recommendation, followed by a runner-up and a value pick so you can see the shape of the market, not just one answer.</p>
+          <div class="callout">
+            <p><strong>Transparency:</strong> some cards link to our affiliate partners, and if you buy through those links ProductMotive earns a commission at no extra cost to you. The ranking itself is computed from your answers and each host's documented positioning — not from commission size. Our full policy is on the <a href="affiliate-disclosure.html">Affiliate Disclosure</a> page.</p>
+          </div>
+
+          <hr class="article-rule">
+
+          <h3 id="faq">Quick answers to common questions</h3>
+          <div class="faq">
+            <div class="faq-item">
+              <details>
+                <summary>What is the difference between shared and VPS hosting?</summary>
+                <div class="faq-a">
+                  <p>Shared hosting runs your site on a server with many others — cheap and simple, but limited on resources and at the mercy of your neighbours. A VPS gives you a dedicated slice of a server with guaranteed resources and real control. Choose shared for small or simple sites; choose VPS for performance, custom software or steady growth.</p>
+                </div>
+              </details>
+            </div>
+            <div class="faq-item">
+              <details>
+                <summary>Is cheap hosting fine for a small blog?</summary>
+                <div class="faq-a">
+                  <p>Yes. For a personal blog or portfolio, budget shared hosting (Hostinger, HostGator, InterServer or Verpex) is usually more than enough. Just check the renewal price before you commit — intro rates are often half of what you'll pay next year.</p>
+                </div>
+              </details>
+            </div>
+            <div class="faq-item">
+              <details>
+                <summary>Do I need managed WordPress hosting?</summary>
+                <div class="faq-a">
+                  <p>Only when your WordPress site pays for itself. Managed hosting adds automatic updates, security, staging and faster loading for several times the cost of shared. It's worth it for business sites, online stores and agencies — not for a hobby blog.</p>
+                </div>
+              </details>
+            </div>
+            <div class="faq-item">
+              <details>
+                <summary>Can I move hosts later if I chose badly?</summary>
+                <div class="faq-a">
+                  <p>Almost always, yes. Moving is routine and most hosts migrate WordPress sites for free. Keep your domain registered separately from your hosting — that single habit makes switching hosts trivial.</p>
+                </div>
+              </details>
+            </div>
+            <div class="faq-item">
+              <details>
+                <summary>Which hosting should a developer choose?</summary>
+                <div class="faq-a">
+                  <p>If you're comfortable on the command line, a cloud VPS like DigitalOcean gives the most control at a predictable price. If you'd rather not maintain servers yourself, a managed cloud platform like Cloudways delivers the same headroom without the sysadmin work.</p>
+                </div>
+              </details>
+            </div>
+            <div class="faq-item">
+              <details>
+                <summary>What's the difference between a website builder and web hosting?</summary>
+                <div class="faq-a">
+                  <p>A website builder is a tool that builds and often serves your site; hosting is where your site's files live. Many cheap hosts bundle an easy builder, which is perfect if you're starting without a developer and don't want to touch code.</p>
+                </div>
+              </details>
+            </div>
+            <div class="faq-item">
+              <details>
+                <summary>Does the host's location matter?</summary>
+                <div class="faq-a">
+                  <p>Yes — distance affects load speed. Data centres closer to your audience load faster, which is why providers like Verpex and Cloudways let you pick a region. For a global audience it matters less; for local customers, choose a nearby data centre when you can.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-card">
+          <h2>Not sure you came to the right place?</h2>
+          <p>Web hosting was the first category we built out in full. The ProductMotive match flow covers more categories with the same reasoning-first approach.</p>
+          <a class="btn btn--light btn--lg" href="find-your-match.html">Try Find My Match <span class="btn-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="ProductMotive home">
+            <svg class="brand-mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <rect width="32" height="32" rx="9" fill="#1F2328"/>
+              <path d="M9 11l7 5-7 5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="22.5" cy="16" r="3" fill="#4FD1BF"/>
+            </svg>
+            <span class="brand-name">ProductMotive</span>
+          </a>
+          <p class="footer-tagline">Helping you choose products and software that fit your situation.</p>
+        </div>
+
+        <nav class="footer-col" aria-labelledby="footer-explore">
+          <h2 class="footer-title" id="footer-explore">Explore</h2>
+          <ul>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="web-hosting.html">Web Hosting</a></li>
+            <li><a href="comparisons.html">Comparisons</a></li>
+            <li><a href="guides.html">Guides</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-labelledby="footer-company">
+          <h2 class="footer-title" id="footer-company">Company</h2>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-labelledby="footer-legal">
+          <h2 class="footer-title" id="footer-legal">Legal</h2>
+          <ul>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> ProductMotive. All rights reserved.</p>
+        <p>ProductMotive may earn a commission from qualifying purchases made through links on this site.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/hosting.js" defer></script>
+</body>
+</html>

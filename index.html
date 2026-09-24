@@ -70,6 +70,7 @@
     <symbol id="i-business" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2.5"/><path d="M9 8V6.5A1.5 1.5 0 0 1 10.5 5h3A1.5 1.5 0 0 1 15 6.5V8M3 13h18"/></symbol>
     <symbol id="i-travel" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
     <symbol id="i-lifestyle" viewBox="0 0 24 24"><path d="M12 19.5s-7-4.3-7-9.6A3.9 3.9 0 0 1 12 7.6a3.9 3.9 0 0 1 7 2.3c0 5.3-7 9.6-7 9.6z"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="6.5" rx="1.6"/><rect x="3.5" y="13.5" width="17" height="6.5" rx="1.6"/><path d="M7 7.25h.01M7 16.75h.01"/></symbol>
     <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".6"/></symbol>
     <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4.5v15M7 19.5h10M5 8h14"/><path d="M5 8l-2.5 5.5a2.6 2.6 0 0 0 5 0L5 8zM19 8l-2.5 5.5a2.6 2.6 0 0 0 5 0L19 8z"/></symbol>
     <symbol id="i-compare" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="7.5" height="15" rx="2"/><rect x="13" y="4.5" width="7.5" height="15" rx="2"/><path d="M6 9.5h2.5M6 13h2.5M15.5 9.5H18M15.5 13H18"/></symbol>
@@ -80,7 +81,7 @@
        ========================================================== -->
   <header class="site-header" data-header>
     <div class="container header-inner">
-      <a class="brand" href="/" aria-label="ProductMotive home">
+      <a class="brand" href="index.html" aria-label="ProductMotive home">
         <svg class="brand-mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
           <rect width="32" height="32" rx="9" fill="#1F2328"/>
           <path d="M9 11l7 5-7 5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -91,12 +92,12 @@
 
       <nav class="primary-nav" id="primary-nav" aria-label="Primary" data-nav>
         <ul class="nav-list">
-          <li><a href="/#how-it-works">How It Works</a></li>
-          <li><a href="/#categories">Categories</a></li>
-          <li><a href="/#guides">Guides</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#guides">Guides</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
-        <a class="btn btn--primary btn--sm" href="/find-your-match">Find My Match <span class="btn-arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--primary btn--sm" href="find-your-match.html">Find My Match <span class="btn-arrow" aria-hidden="true">→</span></a>
       </nav>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
@@ -117,7 +118,7 @@
           <h1 id="hero-title">Find the right product for you.</h1>
           <p class="lead">Not just the most popular one. Tell us what you need and we’ll help you narrow down the options.</p>
           <div class="hero-actions">
-            <a class="btn btn--primary btn--lg" href="/find-your-match">Find My Match <span class="btn-arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn--primary btn--lg" href="find-your-match.html">Find My Match <span class="btn-arrow" aria-hidden="true">→</span></a>
             <a class="link-quiet" href="#how-it-works">See how it works</a>
           </div>
         </div>
@@ -244,17 +245,17 @@
             <h2 id="cat-title">What are you looking for?</h2>
             <p class="section-lead">Choose a category to start, or begin without one.</p>
           </div>
-          <a class="link-quiet" href="/find-your-match">Start without a category</a>
+          <a class="link-quiet" href="find-your-match.html">Start without a category</a>
         </header>
 
         <ul class="cat-grid" id="category-grid" data-component="categories">
           <!-- Rendered from PM_DATA.categories. Static fallback for no-JS and crawlers: -->
-          <li><a href="/find-your-match?category=technology">Technology</a></li>
-          <li><a href="/find-your-match?category=home-office">Home &amp; Office</a></li>
-          <li><a href="/find-your-match?category=software">Software</a></li>
-          <li><a href="/find-your-match?category=business">Business</a></li>
-          <li><a href="/find-your-match?category=travel">Travel</a></li>
-          <li><a href="/find-your-match?category=lifestyle">Lifestyle</a></li>
+          <li><a href="find-your-match.html?category=technology">Technology</a></li>
+          <li><a href="find-your-match.html?category=home-office">Home &amp; Office</a></li>
+          <li><a href="find-your-match.html?category=software">Software</a></li>
+          <li><a href="find-your-match.html?category=business">Business</a></li>
+          <li><a href="find-your-match.html?category=travel">Travel</a></li>
+          <li><a href="find-your-match.html?category=lifestyle">Lifestyle</a></li>
         </ul>
       </div>
     </section>
@@ -443,7 +444,7 @@
           </article>
         </div>
 
-        <p class="fineprint">This is an illustrative example with placeholder products. ProductMotive may earn a commission from some links. See our <a href="/affiliate-disclosure">Affiliate Disclosure</a>.</p>
+        <p class="fineprint">This is an illustrative example with placeholder products. ProductMotive may earn a commission from some links. See our <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
       </div>
     </section>
 
@@ -486,14 +487,14 @@
             <h2 id="guides-title">Explore smarter ways to choose.</h2>
             <p class="section-lead">Practical guides for making better decisions, whatever you’re buying.</p>
           </div>
-          <a class="link-quiet" href="/guides">View all guides</a>
+          <a class="link-quiet" href="guides.html">View all guides</a>
         </header>
 
         <ul class="guide-grid" id="guide-grid" data-component="guides">
           <!-- Rendered from PM_DATA.guides. Static fallback for no-JS and crawlers: -->
-          <li><a href="/guides/define-what-you-need">How to define what you need before you compare</a></li>
-          <li><a href="/guides/price-and-value">Price and value: how to think about trade-offs</a></li>
-          <li><a href="/guides/compare-without-specs-overload">How to compare options without getting lost in specs</a></li>
+          <li><a href="guides/define-what-you-need.html">How to define what you need before you compare</a></li>
+          <li><a href="guides/price-and-value.html">Price and value: how to think about trade-offs</a></li>
+          <li><a href="guides/compare-without-specs-overload.html">How to compare options without getting lost in specs</a></li>
         </ul>
       </div>
     </section>
@@ -506,7 +507,7 @@
         <div class="cta-card">
           <h2 id="cta-title">Start with what matters to you.</h2>
           <p>Answer a few questions and we’ll help you narrow down the options.</p>
-          <a class="btn btn--light btn--lg" href="/find-your-match">Find My Match <span class="btn-arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--light btn--lg" href="find-your-match.html">Find My Match <span class="btn-arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
@@ -519,7 +520,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="brand" href="/" aria-label="ProductMotive home">
+          <a class="brand" href="index.html" aria-label="ProductMotive home">
             <svg class="brand-mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
               <rect width="32" height="32" rx="9" fill="#1F2328"/>
               <path d="M9 11l7 5-7 5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -533,27 +534,28 @@
         <nav class="footer-col" aria-labelledby="footer-explore">
           <h2 class="footer-title" id="footer-explore">Explore</h2>
           <ul>
-            <li><a href="/how-it-works">How It Works</a></li>
-            <li><a href="/categories">Categories</a></li>
-            <li><a href="/comparisons">Comparisons</a></li>
-            <li><a href="/guides">Guides</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="web-hosting.html">Web Hosting</a></li>
+            <li><a href="comparisons.html">Comparisons</a></li>
+            <li><a href="guides.html">Guides</a></li>
           </ul>
         </nav>
 
         <nav class="footer-col" aria-labelledby="footer-company">
           <h2 class="footer-title" id="footer-company">Company</h2>
           <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
 
         <nav class="footer-col" aria-labelledby="footer-legal">
           <h2 class="footer-title" id="footer-legal">Legal</h2>
           <ul>
-            <li><a href="/privacy">Privacy</a></li>
-            <li><a href="/terms">Terms</a></li>
-            <li><a href="/affiliate-disclosure">Affiliate Disclosure</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
           </ul>
         </nav>
       </div>
@@ -576,7 +578,7 @@
           <span class="cat-icon"><svg class="icon" aria-hidden="true" focusable="false"><use data-slot="icon" href="#i-grid"></use></svg></span>
           <svg class="icon cat-arrow" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg>
         </div>
-        <h3 class="cat-name"><a class="stretched" data-slot="link" href="/find-your-match"></a></h3>
+        <h3 class="cat-name"><a class="stretched" data-slot="link" href="find-your-match.html"></a></h3>
         <p class="cat-desc" data-slot="description"></p>
         <p class="cat-examples" data-slot="examples"></p>
       </article>
@@ -591,7 +593,7 @@
         </div>
         <div class="guide-body">
           <p class="guide-tag" data-slot="tag"></p>
-          <h3 class="guide-title"><a class="stretched" data-slot="link" href="/guides"></a></h3>
+          <h3 class="guide-title"><a class="stretched" data-slot="link" href="guides.html"></a></h3>
           <p class="guide-excerpt" data-slot="excerpt"></p>
         </div>
       </article>

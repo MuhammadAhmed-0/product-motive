@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Price and value: how to think about trade-offs | ProductMotive Guides</title>
+  <meta name="description" content="Why the cheapest and the most expensive options are rarely the right place to start when you're choosing a product.">
+  <link rel="canonical" href="https://productmotive.com/guides/price-and-value.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#F8F8F5">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ProductMotive">
+  <meta property="og:title" content="Price and value: how to think about trade-offs | ProductMotive">
+  <meta property="og:description" content="Why the cheapest and the most expensive options are rarely the right place to start.">
+  <meta property="og:url" content="https://productmotive.com/guides/price-and-value.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231F2328'/%3E%3Cpath d='M9 11l7 5-7 5' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='22.5' cy='16' r='3' fill='%234FD1BF'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&display=swap">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M6 12h12"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></symbol>
+    <symbol id="i-technology" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M9.5 3.5v2M14.5 3.5v2M9.5 18.5v2M14.5 18.5v2M3.5 9.5h2M3.5 14.5h2M18.5 9.5h2M18.5 14.5h2"/></symbol>
+    <symbol id="i-home-office" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 9.5V19h12V9.5"/><path d="M10 19v-5h4v5"/></symbol>
+    <symbol id="i-software" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 9.5h18M7 7.25h.01M10 7.25h.01"/></symbol>
+    <symbol id="i-business" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2.5"/><path d="M9 8V6.5A1.5 1.5 0 0 1 10.5 5h3A1.5 1.5 0 0 1 15 6.5V8M3 13h18"/></symbol>
+    <symbol id="i-travel" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
+    <symbol id="i-lifestyle" viewBox="0 0 24 24"><path d="M12 19.5s-7-4.3-7-9.6A3.9 3.9 0 0 1 12 7.6a3.9 3.9 0 0 1 7 2.3c0 5.3-7 9.6-7 9.6z"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".6"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4.5v15M7 19.5h10M5 8h14"/><path d="M5 8l-2.5 5.5a2.6 2.6 0 0 0 5 0L5 8zM19 8l-2.5 5.5a2.6 2.6 0 0 0 5 0L19 8z"/></symbol>
+    <symbol id="i-compare" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="7.5" height="15" rx="2"/><rect x="13" y="4.5" width="7.5" height="15" rx="2"/><path d="M6 9.5h2.5M6 13h2.5M15.5 9.5H18M15.5 13H18"/></symbol>
+  </svg>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="ProductMotive home">
+        <svg class="brand-mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="9" fill="#1F2328"/>
+          <path d="M9 11l7 5-7 5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="22.5" cy="16" r="3" fill="#4FD1BF"/>
+        </svg>
+        <span class="brand-name">ProductMotive</span>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary" data-nav>
+        <ul class="nav-list">
+          <li><a href="../how-it-works.html">How It Works</a></li>
+          <li><a href="../categories.html">Categories</a></li>
+          <li><a href="../guides.html" aria-current="page">Guides</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm" href="../find-your-match.html">Find My Match <span class="btn-arrow" aria-hidden="true">→</span></a>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+        <span class="sr-only">Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="article-title">
+      <div class="container">
+        <p class="crumbs crumb"><a href="../guides.html">Guides</a> · Budgeting</p>
+        <h1 id="article-title">Price and value: how to think about trade-offs</h1>
+        <p class="section-lead">Why the cheapest and the most expensive options are rarely the right place to start.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="prose">
+          <p class="meta">Guide · 5 min read</p>
+
+          <h2>Price is a fact. Value is a judgement.</h2>
+          <p>Price is what you pay. Value is what you get for it, measured against what you actually need. Two people can look at the same product at the same price and disagree about whether it’s a good deal — and both be right.</p>
+          <p>The trap is treating price as the whole question. “Is it worth it?” is only answerable once you know the job it has to do, which is why <a href="define-what-you-need.html">defining what you need</a> always comes first.</p>
+
+          <h2>Cheapest ≠ best value</h2>
+          <p>The cheapest option usually wins on one criterion only: price. It often loses on everything you actually ranked — reliability, ease of use, longevity. If you’re buying a tool you’ll use every day, a cheap one that fails or frustrates isn’t value; it’s an expensive mistake scheduled in the future.</p>
+
+          <h2>Most expensive ≠ best either</h2>
+          <p>At the top of a range, you start paying for diminishing returns — marginal gains and brands. The question isn’t “can I afford it?” but “does the extra cost buy something I’ll notice?” If you can’t name what the premium gets you in terms of your use case, it’s not a trade-off, it’s a tax.</p>
+          <div class="callout">
+            <p><strong>A useful reframe:</strong> instead of “cheapest” vs “best,” look for the <strong>best value point</strong> — the cheapest option that still clears your non-negotiables. Usually that sits just above the budget model, where you pay a little more for the feature that actually changes your day.</p>
+          </div>
+
+          <h2>Price the full cost, not the sticker</h2>
+          <p>Compare like for like. Include:</p>
+          <ul>
+            <li><strong>Ongoing costs</strong> — subscriptions, consumables, energy, accessories.</li>
+            <li><strong>Lifespan</strong> — a higher price over five years can beat a lower price over eighteen months.</li>
+            <li><strong>Your time</strong> — set-up, learning curve, maintenance. Comfort counts.</li>
+          </ul>
+          <p>This is why ProductMotive asks for a budget <em>range</em> rather than a single number: the useful decision is about what sits inside the range, not which end.</p>
+
+          <div class="card-grid" style="margin-top: 36px;">
+            <a class="info-card stretched" href="define-what-you-need.html">
+              <div class="ic-top">
+                <span class="cat-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-target"></use></svg></span>
+                <svg class="icon cat-arrow" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg>
+              </div>
+              <h3 class="ic-title">Start here: define what you need</h3>
+              <p class="ic-text">Set the requirements before you weigh the price against them.</p>
+            </a>
+            <a class="info-card stretched" href="compare-without-specs-overload.html">
+              <div class="ic-top">
+                <span class="cat-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-compare"></use></svg></span>
+                <svg class="icon cat-arrow" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg>
+              </div>
+              <h3 class="ic-title">Next: compare without specs overload</h3>
+              <p class="ic-text">Keep the table focused on the few criteria that matter.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cta">
+      <div class="container">
+        <div class="cta-card">
+          <h2>Let a range guide you.</h2>
+          <p>Set a budget range and priorities; we’ll rank the options that fit.</p>
+          <a class="btn btn--light btn--lg" href="../find-your-match.html">Find My Match <span class="btn-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../index.html" aria-label="ProductMotive home">
+            <svg class="brand-mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <rect width="32" height="32" rx="9" fill="#1F2328"/>
+              <path d="M9 11l7 5-7 5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="22.5" cy="16" r="3" fill="#4FD1BF"/>
+            </svg>
+            <span class="brand-name">ProductMotive</span>
+          </a>
+          <p class="footer-tagline">Helping you choose products and software that fit your situation.</p>
+        </div>
+
+        <nav class="footer-col" aria-labelledby="footer-explore">
+          <h2 class="footer-title" id="footer-explore">Explore</h2>
+          <ul>
+            <li><a href="../how-it-works.html">How It Works</a></li>
+            <li><a href="../categories.html">Categories</a></li>
+            <li><a href="../comparisons.html">Comparisons</a></li>
+            <li><a href="../guides.html">Guides</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-labelledby="footer-company">
+          <h2 class="footer-title" id="footer-company">Company</h2>
+          <ul>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-labelledby="footer-legal">
+          <h2 class="footer-title" id="footer-legal">Legal</h2>
+          <ul>
+            <li><a href="../privacy.html">Privacy</a></li>
+            <li><a href="../terms.html">Terms</a></li>
+            <li><a href="../affiliate-disclosure.html">Affiliate Disclosure</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> ProductMotive. All rights reserved.</p>
+        <p>ProductMotive may earn a commission from qualifying purchases made through links on this site.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/data.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
