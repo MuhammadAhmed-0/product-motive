@@ -14,7 +14,7 @@ window.PM_DATA.hosting = {
       {
         id: "shared",
         name: "Shared hosting",
-        tagline: "Your site shares a server with others â€” the cheapest, simplest option and right for most small sites.",
+        tagline: "Your site shares a server with others Ã¢â‚¬â€ the cheapest, simplest option and right for most small sites.",
         rules: [
           { when: { use: "blog" }, points: 10, why: "Blogs and portfolios are small and simple" },
           { when: { use: "unsure" }, points: 7, why: "The easiest place to start" },
@@ -42,7 +42,7 @@ window.PM_DATA.hosting = {
       {
         id: "vps",
         name: "VPS hosting",
-        tagline: "A dedicated slice of a server with root access â€” real power at a fair price, but you maintain it.",
+        tagline: "A dedicated slice of a server with root access Ã¢â‚¬â€ real power at a fair price, but you maintain it.",
         rules: [
           { when: { skill: "expert" }, points: 9, why: "You're comfortable managing a server" },
           { when: { skill: "mid" }, points: 4 },
@@ -63,7 +63,7 @@ window.PM_DATA.hosting = {
       {
         id: "cloud",
         name: "Managed cloud hosting",
-        tagline: "Cloud infrastructure without the sysadmin work â€” scales with your site and stays simpler to run.",
+        tagline: "Cloud infrastructure without the sysadmin work Ã¢â‚¬â€ scales with your site and stays simpler to run.",
         rules: [
           { when: { skill: "mid" }, points: 8, why: "Cloud power without managing servers" },
           { when: { skill: "expert" }, points: 6 },
@@ -86,7 +86,7 @@ window.PM_DATA.hosting = {
       {
         id: "managed-wp",
         name: "Managed WordPress hosting",
-        tagline: "WordPress-specific hosting where updates, security, backups and speed are handled for you â€” at a premium.",
+        tagline: "WordPress-specific hosting where updates, security, backups and speed are handled for you Ã¢â‚¬â€ at a premium.",
         rules: [
           { when: { platform: "wordpress" }, points: 10, why: "Everything WordPress is taken care of" },
           { when: { use: "store" }, points: 8, why: "Stores justify the premium with uptime and speed" },
@@ -109,7 +109,7 @@ window.PM_DATA.hosting = {
       {
         id: "dedicated",
         name: "Dedicated server",
-        tagline: "A whole physical machine to yourself â€” for very high workloads or strict requirements.",
+        tagline: "A whole physical machine to yourself Ã¢â‚¬â€ for very high workloads or strict requirements.",
         rules: [
           { when: { traffic: "high" }, points: 6, why: "Unmatched headroom" },
           { when: { use: "app" }, points: 4 },
@@ -140,7 +140,7 @@ window.PM_DATA.hosting = {
       {
         id: "skill",
         title: "How hands-on do you want to be?",
-        copy: "Be honest â€” a host that matches your comfort level saves you days of frustration.",
+        copy: "Be honest Ã¢â‚¬â€ a host that matches your comfort level saves you days of frustration.",
         options: [
           { id: "beginner", label: "Beginner", copy: "I want everything handled for me" },
           { id: "mid", label: "Some experience", copy: "Comfortable with cPanel or a similar panel" },
@@ -162,7 +162,7 @@ window.PM_DATA.hosting = {
       {
         id: "traffic",
         title: "How much traffic do you expect?",
-        copy: "A rough range is enough â€” it keeps the shortlist honest.",
+        copy: "A rough range is enough Ã¢â‚¬â€ it keeps the shortlist honest.",
         options: [
           { id: "low", label: "A few thousand visits a month" },
           { id: "medium", label: "Thousands to tens of thousands" },
@@ -242,7 +242,7 @@ window.PM_DATA.hosting = {
         accent: "#673DE6",
         type: "Shared, VPS & Cloud",
         typeCat: ["shared", "vps"],
-        skill: "Beginnerâ€“mid",
+        skill: "BeginnerÃ¢â‚¬â€œmid",
         budget: "budget",
         budgetTag: "Budget",
         bestFor: "Great value shared hosting for small sites and beginners",
@@ -255,7 +255,7 @@ window.PM_DATA.hosting = {
         url: "https://www.hostinger.com",
         plans: [
           { name: "Single", tag: "Entry", when: { sites: "one", budget: "minimum" }, note: "One site at the lowest price." },
-          { name: "Premium", tag: "Most popular", popular: true, when: { sites: "few", skill: "beginner" }, note: "The usual sweet spot â€” more room, still cheap." },
+          { name: "Premium", tag: "Most popular", popular: true, when: { sites: "few", skill: "beginner" }, note: "The usual sweet spot Ã¢â‚¬â€ more room, still cheap." },
           { name: "Business", tag: "Performance", when: { use: "business", traffic: "medium" }, note: "Daily backups and extra performance." },
           { name: "Cloud Startup", tag: "Cloud", when: { traffic: "high" }, note: "Cloud infrastructure for growing traffic." }
         ],
@@ -341,7 +341,7 @@ window.PM_DATA.hosting = {
         plans: [
           { name: "Basic Droplet", tag: "Entry VPS", when: { traffic: "low", budget: "standard" }, note: "The cheapest way to run a real VPS." },
           { name: "General Purpose Droplet", tag: "Performance", popular: true, when: { traffic: "medium", use: "app" }, note: "More CPU and RAM for real workloads." },
-          { name: "App Platform", tag: "No-server", when: { skill: "mid", use: "app" }, note: "Push code, get a managed deployment â€” no server admin." },
+          { name: "App Platform", tag: "No-server", when: { skill: "mid", use: "app" }, note: "Push code, get a managed deployment Ã¢â‚¬â€ no server admin." },
           { name: "CPU Optimized Droplet", tag: "Scale", when: { traffic: "high" }, note: "Heavy compute for when you need it." }
         ],
         rules: [
@@ -370,11 +370,11 @@ window.PM_DATA.hosting = {
         accent: "#17939F",
         type: "Managed WordPress",
         typeCat: ["managed-wp"],
-        skill: "Beginnerâ€“mid",
+        skill: "BeginnerÃ¢â‚¬â€œmid",
         budget: "premium",
         budgetTag: "Premium",
         bestFor: "Business or store WordPress sites that need premium managed hosting",
-        tagline: "Best-in-class managed WordPress â€” speed, security and support at a premium.",
+        tagline: "Best-in-class managed WordPress Ã¢â‚¬â€ speed, security and support at a premium.",
         reason: "Top-tier managed WordPress with staging, security and expert support",
         tradeoff: "The most expensive option here, and WordPress-only.",
         pros: ["Managed security, backups and updates", "Fast at scale for WordPress", "Staging sites and expert support"],
@@ -382,7 +382,7 @@ window.PM_DATA.hosting = {
         aff: "https://www.wqwln8trk.com/7X9SZP1PN/724Q2W6B2/",
         url: "https://wpengine.com",
         plans: [
-          { name: "Startup", tag: "Entry", when: { sites: "one" }, note: "The first managed plan â€” a single site." },
+          { name: "Startup", tag: "Entry", when: { sites: "one" }, note: "The first managed plan Ã¢â‚¬â€ a single site." },
           { name: "Professional", tag: "Most popular", popular: true, when: { sites: "few" }, note: "More sites and faster support." },
           { name: "Growth", tag: "Scale", when: { traffic: "high", use: "store" }, note: "Built to scale with traffic." }
         ],
@@ -411,11 +411,11 @@ window.PM_DATA.hosting = {
         accent: "#D6369C",
         type: "Managed cloud VPS",
         typeCat: ["cloud"],
-        skill: "Midâ€“expert",
+        skill: "MidÃ¢â‚¬â€œexpert",
         budget: "standard",
         budgetTag: "Standard",
         bestFor: "Growing sites and agencies that want managed cloud without the sysadmin work",
-        tagline: "Managed VPS on top of AWS, DigitalOcean and Google Cloud â€” cloud power without running a server.",
+        tagline: "Managed VPS on top of AWS, DigitalOcean and Google Cloud Ã¢â‚¬â€ cloud power without running a server.",
         reason: "Managed cloud VPS that scales with your traffic",
         tradeoff: "Pay-as-you-go costs can run higher than shared hosting.",
         pros: ["Pick your cloud provider (AWS, DigitalOcean, more)", "Staging, backups and monitoring built in", "Great fit for WordPress and PHP apps"],
@@ -423,8 +423,8 @@ window.PM_DATA.hosting = {
         aff: "https://www.shareasale.com/u.cfm?d=889391&m=75038&u=3355619",
         url: "https://www.cloudways.com",
         plans: [
-          { name: "Small (1â€“2 GB RAM)", tag: "Entry", when: { traffic: "low", budget: "standard" }, note: "The smallest managed server â€” cheap to start." },
-          { name: "Standard (2â€“4 GB RAM)", tag: "Most popular", popular: true, when: { traffic: "medium" }, note: "The sweet spot for most growing sites." },
+          { name: "Small (1Ã¢â‚¬â€œ2 GB RAM)", tag: "Entry", when: { traffic: "low", budget: "standard" }, note: "The smallest managed server Ã¢â‚¬â€ cheap to start." },
+          { name: "Standard (2Ã¢â‚¬â€œ4 GB RAM)", tag: "Most popular", popular: true, when: { traffic: "medium" }, note: "The sweet spot for most growing sites." },
           { name: "Scaling servers (4 GB+)", tag: "Scale", when: { traffic: "high", sites: "many" }, note: "Add RAM and CPU as demand grows." }
         ],
         rules: [
@@ -454,7 +454,7 @@ window.PM_DATA.hosting = {
         accent: "#16324F",
         type: "Shared & VPS",
         typeCat: ["shared", "vps"],
-        skill: "Midâ€“expert",
+        skill: "MidÃ¢â‚¬â€œexpert",
         budget: "budget",
         budgetTag: "Budget",
         bestFor: "Value seekers who want stable pricing, especially a cheap VPS",
@@ -531,10 +531,9 @@ window.PM_DATA.hosting = {
 
     /* Common mismatches worth flagging on the results screen */
     checklist: [
-      { when: { skill: "beginner", platform: "custom" }, text: "Custom apps usually assume developer comfort. If you're just starting out, lean on a managed platform with support â€” or bring a developer in." },
+      { when: { skill: "beginner", platform: "custom" }, text: "Custom apps usually assume developer comfort. If you're just starting out, lean on a managed platform with support Ã¢â‚¬â€ or bring a developer in." },
       { when: { traffic: "high", budget: "minimum" }, text: "High traffic on the cheapest plans is a recipe for slowdowns. Budget for at least a mid-tier plan." },
       { when: { budget: "premium", traffic: "low" }, text: "Premium hosting is excellent, but for light traffic it may be more than you need to spend right now." },
       { when: { use: "agency", skill: "beginner" }, text: "Hosting client sites is serious business. If you're new, start with one managed provider, learn its panel, then scale." }
     ]
-  }
-};
+  };
