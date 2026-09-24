@@ -30,21 +30,28 @@
     { name: "Lifestyle", href: "find-your-match.html?category=lifestyle" }
   ];
 
-  function navCategories() {
+  function navCategories(prefix) {
     if (data && Array.isArray(data.categories) && data.categories.length) {
       return data.categories.map(function (c) {
         return {
           name: c.name,
-          href: c.href || (CTA + "?category=" + encodeURIComponent(c.id))
+          href: prefix + (c.href || (CTA + "?category=" + encodeURIComponent(c.id)))
         };
       });
     }
-    return FALLBACK_CATEGORIES;
+    return FALLBACK_CATEGORIES.map(function (c) {
+      return { name: c.name, href: prefix + c.href };
+    });
   }
 
-  function renderDropItems(menu) {
+  function renderDropItems(drop, menu) {
+    /* Pages in subfolders pass the relative prefix via data attributes
+       (e.g. guides pages use data-nav-prefix="../"). */
+    var prefix = drop.getAttribute("data-nav-prefix") || "";
+    var allHref = drop.getAttribute("data-nav-all") || "categories.html";
+
     var list = document.createDocumentFragment();
-    navCategories().forEach(function (c) {
+    navCategories(prefix).forEach(function (c) {
       var li = document.createElement("li");
       var a = document.createElement("a");
       a.href = c.href;
@@ -55,7 +62,7 @@
     var all = document.createElement("li");
     var aAll = document.createElement("a");
     aAll.className = "nav-drop-all";
-    aAll.href = "categories.html";
+    aAll.href = allHref;
     aAll.textContent = "All categories";
     all.appendChild(aAll);
     list.appendChild(all);
@@ -67,7 +74,7 @@
     var menu = drop.querySelector("[data-nav-drop-menu]");
     if (!toggle || !menu) return;
 
-    renderDropItems(menu);
+    renderDropItems(drop, menu);
 
     var setOpen = function (open) {
       drop.classList.toggle("is-open", open);
@@ -121,8 +128,10 @@
       setNavOpen(toggle.getAttribute("aria-expanded") !== "true");
     });
 
-    // Close after choosing a link
+    // Close after choosing a link (the dropdown toggle calls preventDefault,
+    // so it never reaches here and the submenu stays open)
     nav.addEventListener("click", function (e) {
+      if (e.defaultPrevented) return;
       if (e.target.closest("a")) setNavOpen(false);
     });
 

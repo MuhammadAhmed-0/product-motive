@@ -244,6 +244,53 @@ h3 {
   .js .header-inner { flex-wrap: wrap; }
 }
 
+/* 5a. Header "Categories" dropdown -------------------------------------- */
+.nav-drop { position: relative; }
+.nav-drop-link { display: inline-flex; align-items: center; gap: 7px; }
+.nav-caret {
+  width: 7px; height: 7px; flex: none;
+  border-right: 1.6px solid currentColor; border-bottom: 1.6px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform .2s var(--ease), color .2s;
+}
+.nav-drop.is-open .nav-caret { transform: rotate(225deg) translateY(-1px); }
+
+.nav-drop-menu {
+  position: absolute; top: calc(100% + 12px); left: 0;
+  min-width: 240px; margin: 0; padding: 8px; list-style: none;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md);
+  box-shadow: var(--shadow-md); z-index: 70;
+  opacity: 0; visibility: hidden; transform: translateY(8px);
+  transition: opacity .18s var(--ease), transform .18s var(--ease), visibility .18s;
+}
+.nav-drop.is-open .nav-drop-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+
+.nav-drop-menu a {
+  display: block; padding: 9px 12px; border-radius: var(--r-sm);
+  font-size: .9375rem; font-weight: 500; color: var(--ink-2);
+  text-decoration: none; transition: background-color .15s, color .15s;
+}
+.nav-drop-menu a:hover { background: var(--accent-tint); color: var(--ink); }
+.nav-drop-menu .nav-drop-all {
+  margin-top: 6px; padding-top: 11px; border-top: 1px solid var(--line);
+  color: var(--accent-strong); font-weight: 600;
+}
+.nav-drop-menu .nav-drop-all:hover { background: var(--accent-tint); color: var(--accent-strong); }
+
+@media (max-width: 859px) {
+  .nav-drop-menu {
+    position: static; min-width: 0; margin: 0; padding: 2px 0 12px;
+    background: transparent; border: 0; border-bottom: 1px solid var(--line);
+    border-radius: 0; box-shadow: none;
+    opacity: 1; visibility: visible; transform: none;
+    display: none; transition: none;
+  }
+  .nav-drop.is-open .nav-drop-menu { display: block; }
+  .nav-drop.is-open > .nav-drop-link { border-bottom-color: transparent; }
+  .nav-drop-menu a { padding: 11px 4px; font-size: 1.0625rem; }
+  .nav-drop-menu .nav-drop-all { padding-left: 4px; color: var(--accent-strong); }
+}
+
 /* 6. Hero + flow preview ------------------------------------------------- */
 .hero { padding-block: clamp(32px, 6vw, 88px) clamp(48px, 7vw, 88px); }
 

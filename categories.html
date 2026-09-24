@@ -21,7 +21,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&display=swap">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&display=swap"></noscript>
   <link rel="stylesheet" href="assets/css/styles.css">
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -60,7 +61,10 @@
       <nav class="primary-nav" id="primary-nav" aria-label="Primary" data-nav>
         <ul class="nav-list">
           <li><a href="how-it-works.html">How It Works</a></li>
-          <li><a href="categories.html" aria-current="page">Categories</a></li>
+          <li class="nav-drop" data-nav-drop data-nav-all="categories.html">
+            <a href="categories.html" class="nav-drop-link" aria-current="page" data-nav-drop-toggle aria-haspopup="true" aria-expanded="false" aria-controls="nav-drop-menu">Categories <span class="nav-caret" aria-hidden="true"></span></a>
+            <ul class="nav-drop-menu" aria-label="Categories" data-nav-drop-menu></ul>
+          </li>
           <li><a href="guides.html">Guides</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
@@ -176,6 +180,7 @@
     </li>
   </template>
 
+  <script src="assets/js/core.js" defer></script>
   <script src="assets/js/data.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
