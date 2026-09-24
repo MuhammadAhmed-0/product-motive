@@ -1,8 +1,8 @@
 /* ==========================================================================
-   ProductMotive: homepage behaviour
-   1. Components   (data → DOM, using <template> elements in index.html)
-   2. Header       (scroll state, mobile menu)
-   3. Misc         (footer year)
+   ProductMotive: data-driven components
+   Renders category + guide grids from PM_DATA (data.js) into <template>
+   based markup. Header/menu behaviour lives in assets/js/core.js.
+   Only loaded on pages with `[data-component]` grids.
    No dependencies. Loaded with `defer`.
    ========================================================================== */
 (function () {
@@ -12,8 +12,6 @@
   if (!data) return;
 
   var CTA = data.ctaHref || "find-your-match.html";
-
-  /* 1. Components ---------------------------------------------------------- */
 
   /** Clone a <template> and return its first element. */
   function fromTemplate(id) {
@@ -89,54 +87,4 @@
 
   render(document.querySelector('[data-component="categories"]'), data.categories, CategoryCard);
   render(document.querySelector('[data-component="guides"]'), data.guides, GuideCard);
-
-  /* 2. Header -------------------------------------------------------------- */
-
-  var header = document.querySelector("[data-header]");
-  var nav = document.querySelector("[data-nav]");
-  var toggle = document.querySelector("[data-nav-toggle]");
-
-  if (header) {
-    var onScroll = function () {
-      header.setAttribute("data-scrolled", window.scrollY > 4 ? "true" : "false");
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-  }
-
-  if (nav && toggle) {
-    var desktop = window.matchMedia("(min-width: 860px)");
-
-    var setOpen = function (open) {
-      nav.classList.toggle("is-open", open);
-      toggle.setAttribute("aria-expanded", String(open));
-    };
-
-    toggle.addEventListener("click", function () {
-      setOpen(toggle.getAttribute("aria-expanded") !== "true");
-    });
-
-    // Close after choosing a link
-    nav.addEventListener("click", function (e) {
-      if (e.target.closest("a")) setOpen(false);
-    });
-
-    // Close with Escape and return focus to the toggle
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
-        setOpen(false);
-        toggle.focus();
-      }
-    });
-
-    // Reset when resizing up to desktop
-    var onBreakpoint = function (e) { if (e.matches) setOpen(false); };
-    if (desktop.addEventListener) desktop.addEventListener("change", onBreakpoint);
-    else if (desktop.addListener) desktop.addListener(onBreakpoint);
-  }
-
-  /* 3. Misc ---------------------------------------------------------------- */
-
-  var year = document.querySelector("[data-year]");
-  if (year) year.textContent = String(new Date().getFullYear());
 })();
