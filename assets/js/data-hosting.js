@@ -1,10 +1,10 @@
 /* ==========================================================================
    ProductMotive: web hosting landing data
    --------------------------------------------------------------------------
-   All the hosting config for web-hosting.html (types, questions, hosts,
+   All the hosting config for best-web-hosting.html (types, questions, hosts,
    plans, rules and the mismatch checklist). Kept out of data.js so the
    global page scripts stay small; this file is loaded ONLY on
-   web-hosting.html (just before assets/js/hosting.js).
+   best-web-hosting.html (just before assets/js/hosting.js).
    ========================================================================== */
 
 window.PM_DATA = window.PM_DATA || {};

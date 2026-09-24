@@ -21,7 +21,7 @@
    ========================================================================== */
 
 window.PM_DATA = {
-  ctaHref: "web-hosting.html",
+  ctaHref: "best-web-hosting.html",
 
   categories: [
     {
@@ -30,7 +30,7 @@ window.PM_DATA = {
       description: "Shared, VPS, cloud and managed WordPress hosting for your site.",
       examples: ["WordPress", "VPS", "Managed cloud"],
       icon: "server",
-      href: "web-hosting.html"
+      href: "best-web-hosting.html"
     },
     {
       id: "technology",
@@ -154,5 +154,5 @@ window.PM_DATA = {
   },
 
 
-  /* Hosting landing data lives in assets/js/data-hosting.js (loaded on web-hosting.html). */
+  /* Hosting landing data lives in assets/js/data-hosting.js (loaded on best-web-hosting.html). */
 };

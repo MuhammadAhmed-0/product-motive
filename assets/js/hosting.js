@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ProductMotive: web hosting landing (web-hosting.html)
+   ProductMotive: web hosting landing (best-web-hosting.html)
    An edge-case quiz → scored shortlist → comparison table + host cards.
    All content comes from PM_DATA.hosting (see assets/js/data-hosting.js).
    No dependencies. Loaded with `defer`.

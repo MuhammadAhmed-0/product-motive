@@ -403,7 +403,7 @@
     foot.className = "match-foot";
     var a = document.createElement("a");
     a.className = "btn btn--primary";
-    a.href = "web-hosting.html";
+    a.href = "best-web-hosting.html";
     a.textContent = "Run the full web hosting match";
     var arrow = document.createElement("span");
     arrow.className = "btn-arrow";

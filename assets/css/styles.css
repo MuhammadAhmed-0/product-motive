@@ -938,7 +938,7 @@ h3 {
 .js .quiz-panel { display: none; }
 .js .quiz-panel.is-active { display: block; animation: rise .45s var(--ease) both; }
 
-/* 18. Hosting landing (web-hosting.html) ---------------------------------- */
+/* 18. Hosting landing (best-web-hosting.html) ---------------------------------- */
 /* Monogram square for each hosting brand (color set inline from data) */
 .host-badge {
   display: grid; place-items: center; flex: none;

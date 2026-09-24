@@ -9,7 +9,7 @@
   "use strict";
 
   var data = window.PM_DATA;
-  var CTA = (data && data.ctaHref) || "web-hosting.html";
+  var CTA = (data && data.ctaHref) || "best-web-hosting.html";
 
   /* 1. Nav dropdown -------------------------------------------------------- */
 
@@ -21,13 +21,13 @@
      >>> Once a category gets its own landing page, give it `href` in data.js
          and add the page link here too. */
   var FALLBACK_CATEGORIES = [
-    { name: "Web Hosting", href: "web-hosting.html" },
-    { name: "Technology", href: "web-hosting.html" },
-    { name: "Home & Office", href: "web-hosting.html" },
-    { name: "Software", href: "web-hosting.html" },
-    { name: "Business", href: "web-hosting.html" },
-    { name: "Travel", href: "web-hosting.html" },
-    { name: "Lifestyle", href: "web-hosting.html" }
+    { name: "Web Hosting", href: "best-web-hosting.html" },
+    { name: "Technology", href: "best-web-hosting.html" },
+    { name: "Home & Office", href: "best-web-hosting.html" },
+    { name: "Software", href: "best-web-hosting.html" },
+    { name: "Business", href: "best-web-hosting.html" },
+    { name: "Travel", href: "best-web-hosting.html" },
+    { name: "Lifestyle", href: "best-web-hosting.html" }
   ];
 
   function navCategories(prefix) {
