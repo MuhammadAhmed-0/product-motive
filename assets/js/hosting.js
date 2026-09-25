@@ -561,10 +561,13 @@
 
       var tdHost = document.createElement("td");
       tdHost.setAttribute("data-label", "Host");
-      tdHost.appendChild(hostBadge(host, false));
+      var hostWrap = document.createElement("div");
+      hostWrap.className = "cmp-host";
+      hostWrap.appendChild(hostBadge(host, false));
       var strong = document.createElement("strong");
       strong.textContent = host.name;
-      tdHost.appendChild(strong);
+      hostWrap.appendChild(strong);
+      tdHost.appendChild(hostWrap);
 
       var tdType = document.createElement("td");
       tdType.setAttribute("data-label", "Type");

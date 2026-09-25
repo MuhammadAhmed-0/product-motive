@@ -1028,8 +1028,12 @@ h3 {
 }
 .cmp-table tbody tr:last-child td { border-bottom: 0; }
 .cmp-table tbody tr:hover { background: var(--surface-2); }
-.cmp-table td:first-child { display: flex; align-items: center; gap: 12px; min-width: 190px; white-space: nowrap; }
-.cmp-table td:first-child strong { white-space: nowrap; }
+.cmp-host {
+  display: flex; align-items: center; gap: 12px; min-width: 0;
+  white-space: nowrap;
+}
+.cmp-host strong { white-space: nowrap; }
+.cmp-table td:first-child { min-width: 190px; }
 .cmp-table td:last-child { text-align: right; }
 .cmp-table .btn { white-space: nowrap; }
 .cmp-renew { display: block; margin-top: 3px; font-size: .8125rem; color: var(--ink-3); }
